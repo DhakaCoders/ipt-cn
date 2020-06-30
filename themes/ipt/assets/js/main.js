@@ -149,6 +149,27 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 }
 
-    new WOW().init();
+
+
+
+
+
+
+/* End of Shoriful*/
+
+
+
+
+
+/* End of Noyon */
+
+
+
+
+
+/*End of Rannojit*/
+
+
+
 
 })(jQuery);
