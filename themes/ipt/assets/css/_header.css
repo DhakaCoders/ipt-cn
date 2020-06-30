@@ -12,7 +12,17 @@
 	position: absolute;
 	left: 0;
 	top: 0;
-
+	z-index: 30;
+}
+.logo{
+	width: 484px;
+	height: 192px;
+	display: flex;
+	align-items: center;
+	background: url(../images/logo-bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	padding-left: 60px;
 }
 .logo a{
 	display: inline-block;
