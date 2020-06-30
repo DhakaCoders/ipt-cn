@@ -170,14 +170,16 @@ img{
 ul.reset-list,
 ol.reset-list,
 ul.sub-menu,
-.fl-pagi-pagi-ctlr ul{
+.fl-pagi-pagi-ctlr ul,
+.reset-slect ul{
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 .reset-list li,
 ul.sub-menu li,
-.fl-pagi-pagi-ctlr ul li{
+.fl-pagi-pagi-ctlr ul li,
+.reset-slect ul li{
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -185,7 +187,8 @@ ul.sub-menu li,
 }
 .reset-list li:before,
 ul.sub-menu li:before,
-.fl-pagi-pagi-ctlr ul li:before{
+.fl-pagi-pagi-ctlr ul li:before,
+.reset-slect ul li:before{
 	content: none!important;
 }
 
@@ -231,12 +234,7 @@ form .bootstrap-select .caret{
 	content: none;
 }
 .dropdown-toggle::before{
-	content: "\f107"!important;
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 600;
-    text-decoration: inherit;
-    color: #1E1E1E;
-    font-size: 22px;
+	content: ""!important;
     padding-right: 0;
     position: absolute;
     top: 50%;
@@ -244,10 +242,16 @@ form .bootstrap-select .caret{
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     right: 15px;
-    line-height: 15px;
+    background: url(../images/down-arrow-gray.svg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    background-position: center center;
 }
 .bootstrap-select.show .dropdown-toggle::before{
-	content: "\f106"!important;
+	content: ""!important;
+	transform: rotate(180deg);
+	margin-top: -7px;
 }
 
 .btn-light.focus, 
@@ -257,9 +261,10 @@ form .bootstrap-select .caret{
 form .show > .dropdown-toggle.btn-default:hover,
 form .btn-default.active, form .btn-default:active, 
 form .show > .dropdown-toggle.btn-default{
-    color: #710023;
+    color: #474747;
     background-color: transparent;
     border: 0;
+    font-weight: 600;
 }
 form .btn-default:hover,
 form .btn-default:focus,
@@ -296,7 +301,7 @@ form .dropdown-menu li a{
 .dropdown-menu>.active>a, 
 .dropdown-menu>.active>a:focus, 
 .dropdown-menu>.active>a:hover{
-	background-color: #F3BF00;
+	background-color: #C90808;
 }
 
 .bootstrap-select .dropdown-toggle:focus{
@@ -308,4 +313,18 @@ form .dropdown-menu li a{
 }
 .dropdown-menu.show{
 	width: 100%;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1;
+}
+
+.bootstrap-select>.dropdown-toggle{
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1;
+	color: #474747;
+}
+.bootstrap-select .dropdown-toggle .filter-option{
+	position: static;
 }
