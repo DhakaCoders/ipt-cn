@@ -1,7 +1,8 @@
 /**
 All Transitions
 */
-a,input,img,textarea,button,svg{
+a,input,img,textarea,button,svg,
+.ftr-tel a span{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
