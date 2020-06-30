@@ -1,0 +1,133 @@
+.page-banner{
+	position: relative;
+}
+.page-banner-controller{
+	min-height: 300px;
+}
+.page-banner-bg{
+	height: 300px;
+}
+.page-banner-des{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding-top: 120px;
+}
+.page-banner-title{
+	display: block;
+	font-size: 56px;
+	line-height: 1;
+	margin-bottom: 20px;
+	font-weight: 700;
+	color: #FFFFFF;
+	text-transform: uppercase;
+}
+.breadcrumbs ul li{
+	display: inline-block;
+	padding-left: 25px;
+	padding-right: 25px;
+	position: relative;
+}
+.breadcrumbs ul li:first-child{
+	padding-left: 15px;
+}
+.breadcrumbs ul li:after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translate(-50%,-50%);
+	background: url('../images/brdcrmb-right-arrow.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 12px;
+	width: 12px;
+}
+.breadcrumbs ul li.active a:before,
+.breadcrumbs ul li:hover a:before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 8px;
+	width: 8px;
+	background: #C90808;
+	border-radius: 100%;
+}
+
+.breadcrumbs ul li:first-child:after{
+	content: none;
+}
+.breadcrumbs ul li a{
+	color: #fff;
+}
+.breadcrumbs ul li a:hover{
+	color: #C90808;
+}
+
+
+
+
+
+
+.ipt-contact-form-sec .wpforms-form .wpforms-field-container .wpforms-field{
+	float: left;
+	width: 50%;
+	padding-bottom: 24px;
+}
+
+.ipt-contact-form-sec .wpforms-form .wpforms-field-container .companyField,
+.ipt-contact-form-sec .wpforms-form .wpforms-field-container .subjectField,
+.ipt-contact-form-sec .wpforms-form .wpforms-field-container .wpforms-field-textarea{
+	width: 100%;
+}
+.VrnCustomField,
+.telField{
+	padding-right: 12px;
+}
+.atnnCustomField,
+.mailField{
+	padding-left: 12px;
+}
+
+.ipt-contact-form-sec .wpforms-form .wpforms-field-container .wpforms-field label{
+	display: inline-block;
+	vertical-align: baseline;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #474747;
+	margin-bottom: 10px;
+	width: 100%;
+}
+.ipt-contact-form-sec .wpforms-form .wpforms-field-container .wpforms-field input{
+	width: 100%;
+	max-width: 100%;
+	height: 64px;
+	background: #FFFFFF;
+	border: 2px solid #EFEFEF;
+	box-sizing: border-box;
+	padding: 24px 16px 24px;
+	color: #787878;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	border-radius: 0;
+}
+.ipt-contact-form-sec .wpforms-form .wpforms-field-container .wpforms-field textarea{
+	width: 100%;
+	height: 240px;
+	background: #FFFFFF;
+	border: 2px solid #EFEFEF;
+	color: #787878;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 500;
+	padding: 20px 16px;
+	resize: none;
+	border-radius: 0;
+}

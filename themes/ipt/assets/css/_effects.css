@@ -2,7 +2,7 @@
 All Transitions
 */
 a,input,img,textarea,button,svg,
-.ftr-tel a span{
+.ftr-tel a span,.hm-fea-box-item{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
