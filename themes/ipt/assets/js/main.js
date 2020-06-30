@@ -169,6 +169,28 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 /*End of Rannojit*/
 
+if( $('.hm-overons-sec-des-logos').length ){
+    $('.hm-overons-sec-des-logos').slick({
+      dots: false,
+      infinite: false,
+      autoplay: false,
+      autoplaySpeed: 2000,
+      speed: 300,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 640,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+          }
+        }
+      ]
+    });
+}
+
 
 
 
