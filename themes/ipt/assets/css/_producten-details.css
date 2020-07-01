@@ -1,0 +1,218 @@
+.back-link-sec-inr{
+	padding: 45px 0;
+	border-bottom: 2px solid #f4f4f4;
+}
+.back-link-sec-inr a{
+	display: inline-block;
+	font-size: 12px;
+	color: #474747;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-left: 22px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	position: relative;
+}
+.back-link-sec-inr a i{
+	position: absolute;
+	top: 40%;
+	left: 0;
+	transform: translateY(-50%);
+}
+.back-link-sec-inr a:hover{
+	color: #C90808;
+}
+.back-link-sec-inr a:hover i svg{
+	fill: #C90808;
+}
+
+
+
+.ipt-pd-welding-sec{
+	padding: 68px 0 78px;
+}
+
+.ipt-pd-welding-sec-ctlr{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ipt-pd-wel-img{
+	min-height: 545px;
+	float: left;
+	width: 50%;
+}
+.ipt-pd-wel-des{
+	float: left;
+	width: 50%;
+	padding-left: 110px;
+}
+
+
+.ipt-pd-wel-des-subtitle{
+	display: block;
+	font-size: 18px;
+	line-height: 1;
+	margin-bottom: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #C90808;
+}
+.ipt-pd-wel-des-title{
+	display: block;
+	font-size: 30px;
+	line-height: 1;
+	margin-bottom: 22px;
+	font-weight: 700;
+}
+.ipt-pd-wel-des p{
+	margin-bottom: 25px;
+}
+.ipt-pd-wel-des a{
+	display: inline-block;
+	max-width: 180px;
+	width: 100%;
+	height: 56px;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	color: #fff;
+	background: linear-gradient(215.68deg, #FF0000 30.23%, #C90707 100%), #C90808;
+	border: 2px solid #C90808;
+	font-weight: 700;
+	text-transform: uppercase;
+	border-radius: 8px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+}
+.ipt-pd-wel-des a:hover{
+	background: transparent;
+	color: #C90808;
+}
+
+.ipt-pd-slider-sec-wrap{
+	padding: 65px 0 80px;
+	background: linear-gradient(220.21deg, #FFFFFF 3.15%, 
+		rgba(255, 255, 255, 0) 67.79%), #F4F4F4;
+}
+
+.ipt-pd-slider-entry-hdr{
+	text-align: center;
+}
+
+.ipt-pd-slider-entry-tilte{
+	display: block;
+	font-size: 30px;
+	line-height: 1;
+	margin-bottom: 10px;
+	font-weight: 700;
+}
+.ipt-pd-slider-entry-hdr p{
+	margin-bottom: 55px;
+}
+
+.ipt-pd-sliders{
+	margin-left: -12px;
+	margin-right: -12px;
+}
+.ipt-pd-slider-item{
+	float: left;
+	width: 33.3333%;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+.ipt-pd-slider-item-ctlr{
+	background: #fff;
+	text-align: center;
+	padding: 50px 30px 20px;
+}
+
+.ipt-pd-slider-item-img{
+	padding-bottom: 45px;
+	border-bottom: 4px solid transparent;
+	max-width: 360px;
+	width: 100%;
+	margin: 0 auto;
+}
+.ipt-pd-slider-item-img img{
+	max-width: 215px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.ipt-pd-slider-title{
+	display: block;
+	font-size: 24px;
+	line-height: 1;
+	margin-bottom: 18px;
+	font-weight: 700;
+	text-transform: capitalize;
+	margin-top: 30px;
+}
+.ipt-pd-slider-title a{
+	color: #474747;
+}
+
+.ipt-pd-slider-sec{
+	position: relative;
+}
+.ipt-pd-slider-arrow .ipt-pd-slider-leftarrow,
+.ipt-pd-slider-arrow .ipt-pd-slider-rightarrow{
+	display: block;
+	height: 20px;
+	width: 20px;
+	cursor: pointer;
+	text-align: center;
+	top: 50%;
+	-ms-transform: translateY(-50%,-50%);
+	-webkit-transform: translateY(-50%,-50%);
+	transform: translateY(-50%,-50%);
+	z-index: 5;
+}
+.ipt-pd-slider-arrow .ipt-pd-slider-leftarrow{
+	position: absolute;
+	left: -55px;
+	background-image: url(../images/ipt-pd-slider-leftarrow.png);
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+    background-position: center center;
+}
+.ipt-pd-slider-arrow .ipt-pd-slider-leftarrow:hover{
+	background-image: url(../images/ipt-pd-slider-leftarrow-hover.png);
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+    background-position: center center;
+}
+.ipt-pd-slider-arrow .ipt-pd-slider-rightarrow{
+	position: absolute;
+	right: -55px;
+	background-image: url(../images/ipt-pd-slider-rightarrow.png);
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+    background-position: center center;
+}
+.ipt-pd-slider-arrow .ipt-pd-slider-rightarrow:hover{
+	background-image: url(../images/ipt-pd-slider-rightarrow-hover.png);
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+    background-position: center center;
+}
+
+.iptPdSliders .ipt-pd-slider-item{
+	display: none !important;
+}
+.iptPdSliders .ipt-pd-slider-item:first-child{
+	display: block !important;
+}
+.iptPdSliders.slick-initialized .ipt-pd-slider-item{
+	display: block !important;
+}
+
+.iptPdSliders .slick-current .ipt-pd-slider-item-img{
+	border-bottom: 4px solid #F5F5F5;
+}

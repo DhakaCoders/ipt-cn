@@ -195,7 +195,7 @@
 	width: 100%;
 	height: 56px;
 	border: 2px solid #C90808!important;
-	background: #C90808;
+	background: linear-gradient(215.68deg, #FF0000 30.23%, #C90707 100%), #C90808;
 	font-size: 14px;
 	line-height: 18px;
 	text-transform: uppercase;
@@ -208,7 +208,7 @@
 	display: table;
 	margin: 0 auto;
 	padding: 19px 10px 20px;
-	border-radius: 5px;
+	border-radius: 8px;
 }
 .ipt-contact-form-sec .wpforms-form .wpforms-submit-container button:hover{
 	background: transparent;

@@ -158,7 +158,21 @@ $(".contact-google-map-des-inr").css({
   left : containerWidth
 });
 
-//alert(containerWidth);
+
+if( $('.iptPdSliders').length ){
+    $('.iptPdSliders').slick({
+      pauseOnHover: false,
+      dots: false,
+      infinite: true,
+      arrows: true,
+      speed: 300,
+      centerMode: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      prevArrow: $('.ipt-pd-slider-arrow .ipt-pd-slider-leftarrow'),
+      nextArrow: $('.ipt-pd-slider-arrow .ipt-pd-slider-rightarrow'),
+    });
+}
 
 
 
