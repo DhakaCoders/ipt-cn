@@ -207,6 +207,12 @@
 }
 .hm-overons-des-logo {
 	text-align: center;
+	
+}
+.hm-overons-des-logo-inr{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .hm-overons-des-logo img{
 	display: inline-block;
