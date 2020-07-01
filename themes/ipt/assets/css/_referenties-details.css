@@ -154,3 +154,10 @@
 .referenties-details-items-sec-innr > ul >li:nth-child(3n+1){
 	clear: left;
 }
+.referenties-details-google-map-sec{
+
+}
+.referenties-details-google-map-sec iframe{
+	width: 100%;
+	min-height: 602px;
+}
