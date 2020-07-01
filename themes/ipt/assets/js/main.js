@@ -178,7 +178,25 @@ if( $('.iptPdSliders').length ){
 
 
 /* End of Shoriful*/
-
+ $('.referentiesDetailsSlider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  dots: false,
+  fade: true,
+  asNavFor: '.referentiesDetailsThumbnailSlider'
+});
+$('.referentiesDetailsThumbnailSlider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  asNavFor: '.referentiesDetailsSlider',
+  dots: false,
+  centerMode: true,
+  verticalSwiping: true,
+  vertical: true,
+  prevArrow: false,
+  focusOnSelect: true
+});
 
 
 
@@ -254,6 +272,40 @@ if( $('.hmProBxesSlider').length ){
     });
 }
 
+if( $('.hmReferencesSlider').length ){
+    $('.hmReferencesSlider').slick({
+      dots: false,
+      infinite: false,
+      autoplay: false,
+      autoplaySpeed: 2000,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      responsive: [
+        {
+          breakpoint: 640,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        }
+      ]
+    });
+}
+
+$('.tp-tabs .tab-btn').click(function(){
+  $('.hmReferencesSlider').slick('refresh');
+    var tab_id = $(this).attr('data-tab');
+
+    $('.tp-tabs .tab-btn').removeClass('current');
+    $('.fl-tab-content').removeClass('current');
+
+    $(this).addClass('current');
+    $("#"+tab_id).addClass('current');
+});
+
+//alert();
 
 
 })(jQuery);
