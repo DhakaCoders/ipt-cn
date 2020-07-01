@@ -1,5 +1,5 @@
 .back-link-sec-inr{
-	padding: 45px 0;
+	padding: 40px 0;
 	border-bottom: 2px solid #f4f4f4;
 }
 .back-link-sec-inr a{
@@ -96,7 +96,7 @@
 }
 
 .ipt-pd-slider-sec-wrap{
-	padding: 65px 0 80px;
+	padding: 70px 0 85px;
 	background: linear-gradient(220.21deg, #FFFFFF 3.15%, 
 		rgba(255, 255, 255, 0) 67.79%), #F4F4F4;
 }
@@ -109,7 +109,7 @@
 	display: block;
 	font-size: 30px;
 	line-height: 1;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	font-weight: 700;
 }
 .ipt-pd-slider-entry-hdr p{
@@ -129,7 +129,7 @@
 .ipt-pd-slider-item-ctlr{
 	background: #fff;
 	text-align: center;
-	padding: 50px 30px 20px;
+	padding: 50px 38px 25px;
 }
 
 .ipt-pd-slider-item-img{
@@ -152,7 +152,7 @@
 	margin-bottom: 18px;
 	font-weight: 700;
 	text-transform: capitalize;
-	margin-top: 30px;
+	margin-top: 35px;
 }
 .ipt-pd-slider-title a{
 	color: #474747;
@@ -215,4 +215,22 @@
 
 .iptPdSliders .slick-current .ipt-pd-slider-item-img{
 	border-bottom: 4px solid #F5F5F5;
+}
+
+
+
+.ipt-pd-ctlr .ipt-contact-form-sec-inr{
+	max-width: 1045px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 52px 68px;
+	border: 4px solid #FF0000; 
+}
+.btm-border{
+	padding-top: 108px;
+	border-bottom: 3px solid #F9F9F9;
+}
+.ipt-pd-ctlr .ipt-contact-form-sec {
+    padding-top: 125px;
+    padding-bottom: 0px;
 }

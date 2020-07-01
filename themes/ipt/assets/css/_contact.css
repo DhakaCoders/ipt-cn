@@ -28,8 +28,8 @@
 }
 .breadcrumbs ul li{
 	display: inline-block;
-	padding-left: 25px;
-	padding-right: 25px;
+	padding-left: 30px;
+	padding-right: 30px;
 	position: relative;
 }
 .breadcrumbs ul li:first-child{
@@ -93,7 +93,7 @@
 	display: block;
 	font-size: 40px;
 	line-height: 1;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 	font-weight: 700;
 	color: #464646;
 	text-transform: capitalize;
@@ -120,7 +120,7 @@
 .ipt-contact-form-sec .wpforms-form .wpforms-field-container .wpforms-field{
 	float: left;
 	width: 50%;
-	padding-bottom: 24px;
+	padding-bottom: 20px;
 }
 
 .ipt-contact-form-sec .wpforms-form .wpforms-field-container .companyField,
@@ -207,7 +207,7 @@
 	cursor: pointer;
 	display: table;
 	margin: 0 auto;
-	padding: 19px 10px 20px;
+	padding: 20px 10px;
 	border-radius: 8px;
 }
 .ipt-contact-form-sec .wpforms-form .wpforms-submit-container button:hover{
@@ -249,6 +249,8 @@
 	margin: 0;
 	font-weight: 500;
 	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 10px;
 }
 
 
