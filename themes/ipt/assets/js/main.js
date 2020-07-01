@@ -150,7 +150,15 @@ google.maps.event.addDomListener(window, 'load', initialize);
 }
 
 
+var windowWidth = $(window).width();
+var container = $(".container").width();
+var width = windowWidth - container;
+var containerWidth = width / 2;
+$(".contact-google-map-des-inr").css({
+  left : containerWidth
+});
 
+//alert(containerWidth);
 
 
 
@@ -250,6 +258,40 @@ if( $('.hmProBxesSlider').length ){
     });
 }
 
+if( $('.hmReferencesSlider').length ){
+    $('.hmReferencesSlider').slick({
+      dots: false,
+      infinite: false,
+      autoplay: false,
+      autoplaySpeed: 2000,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      responsive: [
+        {
+          breakpoint: 640,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        }
+      ]
+    });
+}
+
+$('.tp-tabs .tab-btn').click(function(){
+  $('.hmReferencesSlider').slick('refresh');
+    var tab_id = $(this).attr('data-tab');
+
+    $('.tp-tabs .tab-btn').removeClass('current');
+    $('.fl-tab-content').removeClass('current');
+
+    $(this).addClass('current');
+    $("#"+tab_id).addClass('current');
+});
+
+//alert();
 
 
 })(jQuery);
