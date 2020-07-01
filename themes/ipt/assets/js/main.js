@@ -156,7 +156,25 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 /* End of Shoriful*/
-
+ $('.referentiesDetailsSlider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  dots: false,
+  fade: true,
+  asNavFor: '.referentiesDetailsThumbnailSlider'
+});
+$('.referentiesDetailsThumbnailSlider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  asNavFor: '.referentiesDetailsSlider',
+  dots: false,
+  centerMode: true,
+  verticalSwiping: true,
+  vertical: true,
+  prevArrow: false,
+  focusOnSelect: true
+});
 
 
 

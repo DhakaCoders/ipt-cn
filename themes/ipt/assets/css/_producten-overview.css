@@ -29,14 +29,13 @@
 	transition: all 0.3s ease-out 0s;
 }
 .producten-overview-items:hover .producten-overview-items-img{
-	transform: scale(1.1);
+	transform: scale(1.05);
 	-webkit-transition: all 0.3s ease-out 0s;
 	-moz-transition: all 0.3s ease-out 0s;
 	transition: all 0.3s ease-out 0s;
 }
 .producten-overview-items-cntlr{
-	position: relative;
-	overflow: hidden;
+	
 }
 .producten-overview-items-img-cntlr{
 	overflow: hidden;
@@ -44,26 +43,29 @@
 	min-height: 292px;
 }
 .producten-overview-items-img{
+	position: relative;
+	overflow: hidden;
 	min-height: 292px;
 	-webkit-transition: all 0.3s ease-out 0s;
 	-moz-transition: all 0.3s ease-out 0s;
 	transition: all 0.3s ease-out 0s;
 }
-.producten-overview-items-title{
+.producten-overview-items-title-wrap{
 	padding-top: 10px;
 }
-.producten-overview-items-title h4{
+.producten-overview-items-title{
 	display: inline-block;
-	text-transform: uppercase;
+	text-transform: none;
 	line-height: 1.2;
 	margin-bottom: 25px;
+	font-size: 24px;
 }
-.producten-overview-items-title > h4 >a{
+.producten-overview-items-title a{
 	display: inline-block;
 	text-decoration: none;
 	color: #474747;
 }
-.producten-overview-items-title > h4 >a:hover{
+.producten-overview-items-title a:hover{
 	color: #474747;
 }
 .producten-overview-items-btn{
@@ -83,6 +85,7 @@
     cursor: pointer;
 }
 .producten-overview-items-btn a:hover{
+	background: green;
 }
 
 
