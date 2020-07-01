@@ -150,7 +150,15 @@ google.maps.event.addDomListener(window, 'load', initialize);
 }
 
 
+var windowWidth = $(window).width();
+var container = $(".container").width();
+var width = windowWidth - container;
+var containerWidth = width / 2;
+$(".contact-google-map-des-inr").css({
+  left : containerWidth
+});
 
+//alert(containerWidth);
 
 
 
