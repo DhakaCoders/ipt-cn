@@ -187,15 +187,15 @@ if( $('.iptPdSliders').length ){
   asNavFor: '.referentiesDetailsThumbnailSlider'
 });
 $('.referentiesDetailsThumbnailSlider').slick({
-  slidesToShow: 1,
+  slidesToShow: 2,
   slidesToScroll: 1,
   asNavFor: '.referentiesDetailsSlider',
   dots: false,
-  centerMode: true,
-  verticalSwiping: true,
   vertical: true,
+  verticalSwiping: true,
   prevArrow: false,
-  focusOnSelect: true
+  focusOnSelect: true,
+  infinite: true,
 });
 
 
