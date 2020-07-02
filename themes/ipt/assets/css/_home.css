@@ -299,11 +299,10 @@
     border-bottom: 400px solid transparent;
     border-left: : 400px solid #C90808;
 
-	/*background: linear-gradient(234.01deg, #FF0000 18.2%, #C90707 100%), #C90808;*/*/
+	/*background: linear-gradient(234.01deg, #FF0000 18.2%, #C90707 100%), #C90808;*/
 }
 .hm-our-references-sec-angle img{
-	width: 100%;
-	height: 100%;
+	min-height: 100%;
 }
 
 .hm-our-references-sec-cntlr{
