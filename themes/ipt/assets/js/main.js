@@ -182,6 +182,8 @@ if( $('.iptPdSliders').length ){
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: true,
+  prevArrow: $('.referenties-details-left-slider-leftArrow'),
+  nextArrow: $('.referenties-details-left-slider-rightArrow'),
   dots: false,
   fade: true,
   asNavFor: '.referentiesDetailsThumbnailSlider'
@@ -192,6 +194,7 @@ $('.referentiesDetailsThumbnailSlider').slick({
   asNavFor: '.referentiesDetailsSlider',
   dots: false,
   vertical: true,
+  arrows: true,
   verticalSwiping: true,
   prevArrow: false,
   focusOnSelect: true,

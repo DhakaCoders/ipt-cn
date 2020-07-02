@@ -46,6 +46,40 @@
 .referenties-details-left-slider{
 	max-width: 72%;
 	width: 100%;
+	position: relative;
+}
+.referenties-details-left-slider-arrow{
+	position: absolute;
+    bottom: 55px;
+    right: 25px;
+    width: 85px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.referenties-details-left-slider-arrow .referenties-details-left-slider-rightArrow,
+.referenties-details-left-slider-arrow .referenties-details-left-slider-leftArrow{
+	display: block;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    text-align: center;
+    z-index: 5;
+}
+.referenties-details-left-slider-arrow .referenties-details-left-slider-leftArrow{
+	background-image: url(../images/referenties-slider-leftarrow.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center center;
+    z-index: 12;
+}
+.referenties-details-left-slider-arrow .referenties-details-left-slider-rightArrow{
+	background-image: url(../images/referenties-slider-rightarrow.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center center;
+    z-index: 12;
 }
 .referenties-details-slider{
 
