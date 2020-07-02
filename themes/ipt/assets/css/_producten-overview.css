@@ -1,10 +1,10 @@
 .Neque-feugiat-sec{
-	padding: 80px 0 42px 0;
+	padding: 80px 0 48px 0;
 }
 .producten-overview-items-sec{
 	background: #f7f7f7;
 	padding-top: 80px;
-	padding-bottom: 80px;
+	padding-bottom: 72px;
 }
 .producten-overview-items-sec-innr{
 
@@ -72,7 +72,7 @@
 	color: #474747;
 }
 .producten-overview-items-btn{
-	padding-bottom: 30px;
+	padding-bottom: 28px;
 }
 .producten-overview-items-btn >a{
     display: inline-block;

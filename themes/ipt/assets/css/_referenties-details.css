@@ -3,13 +3,12 @@
 }
 .referenties-details-slider-sec-innr{
 	padding-top: 58px;
-	padding-bottom: 35px;
 }
 .referenties-details-slider-top{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding-bottom: 40px;
+	padding-bottom: 44px;
 }
 .referenties-details-slider-top-hedding{
 
@@ -37,6 +36,9 @@
 	color: #474747;
 	font-size: 16px;
 	cursor: pointer;
+}
+.referenties-details-slider-top-socials-icons  > ul > li >a:hover{
+	color: #C90808;
 }
 .referenties-details-sliders-cntlr{
 	padding-top: 13px;
@@ -106,7 +108,7 @@
 
 .Beschrijving{
 	padding-top: 35px;
-	padding-bottom: 80px;
+	padding-bottom: 82px;
 }
 .Beschrijving-innr{
 	display: flex;
@@ -167,12 +169,12 @@
 }
 .referenties-details-items-sec{
 	background: #f7f7f7;
-    padding-top: 80px;
+    padding-top: 95px;
     padding-bottom: 50px;
 }
 .referenties-details-items-sec-hedding{
 	text-align: center;
-	padding-bottom: 35px;
+	padding-bottom: 58px;
 }
 .referenties-details-items-sec-innr >ul{
 	display: flex;
