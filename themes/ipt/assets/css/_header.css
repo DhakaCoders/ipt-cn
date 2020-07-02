@@ -104,7 +104,7 @@
 	padding: 0;
 }
 nav.main-nav{
-	padding-right: 22px;
+	padding-right: 0;
 }
 nav.main-nav ul{
 
@@ -124,6 +124,9 @@ nav.main-nav > ul > li{
 	padding: 0px 33px 45px;
 	position: relative;
 	text-transform: uppercase;
+}
+nav.main-nav > ul > li:last-child{
+	padding-right: 0;
 }
 nav.main-nav > ul > li > a{
 	position: relative;
