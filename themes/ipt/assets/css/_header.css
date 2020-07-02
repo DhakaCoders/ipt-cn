@@ -116,7 +116,7 @@ nav.main-nav ul li a{
 	color: #000062;
 }
 nav.main-nav > ul{
-	
+	float: right;
 }
 nav.main-nav > ul > li{
 	display: inline-block;
@@ -198,7 +198,7 @@ nav.main-nav  ul.sub-menu li{
 }
 nav.main-nav ul.sub-menu li a{
 	color: #9e9ea1;
-	font-size: 14px;
+	font-size: 12px;
 	display: block;
 	padding: 10px 20px;
 	position: relative;
