@@ -4,6 +4,9 @@
 	padding-top: 80px;
 	padding-bottom: 0px;
 }
+.referenties-references-sec-hdr{
+	padding-bottom: 40px;
+}
 .referenties-references-sec-angle-cntlr{
 	position: relative;
 }
@@ -33,6 +36,7 @@
 }
 .referenties-references-tab-btns{
 	border-bottom: 2px solid #f4f4f4;
+	padding-bottom: 6px;
 }
 .referenties-references-grd-rgt-col{
 	padding-top: 145px;
@@ -40,7 +44,7 @@
 }
 .referenties-overview-items-sec{
 	padding-top: 95px;
-	padding-bottom: 40px;
+	padding-bottom: 55px;
 }
 .referenties-overview-items-sec-innr > ul >li{
 	margin-bottom: 40px;
@@ -54,7 +58,7 @@
 	padding: 0;
 }
 .referenties-overview-items-desc{
-    padding: 0 25px 0 35px;
+    padding: 0 25px 0 37px;
 }
 .referenties-overview-items-desc >p{
 	margin-bottom: 20px;
@@ -91,7 +95,7 @@
 	color: #474747;
 	padding: 0 29px;
 	padding-bottom: 30px;
-	border-bottom: 3px solid #FF0000;
+	/* border-bottom: 3px solid #FF0000; */
 }
 .page-numbers-cntlr >li:last-child{
 	padding-right: 0;
@@ -120,7 +124,7 @@
 	left: 50%;
 	transform: translateX(-50%);
 	bottom: 0;
-	margin-bottom: -32px;
+	margin-bottom: -29px;
 	z-index: 11;
 
 }
