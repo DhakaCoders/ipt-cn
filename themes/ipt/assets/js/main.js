@@ -182,8 +182,8 @@ if( $('.iptPdSliders').length ){
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: true,
-  prevArrow: $('.referenties-details-left-slider-leftArrow'),
-  nextArrow: $('.referenties-details-left-slider-rightArrow'),
+  prevArrow: $('.rdls-lft-arrow'),
+  nextArrow: $('.rdls-rgt-arrow'),
   dots: false,
   fade: true,
   asNavFor: '.referentiesDetailsThumbnailSlider'
