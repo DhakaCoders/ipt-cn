@@ -25,3 +25,41 @@
 	width: 16px;
 	height: 16px;
 }
+
+.slick-prev,
+.slick-next{
+    z-index: 25;
+    width: 20px;
+    height: 20px;
+    	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.slick-prev:before,
+.slick-next:before{
+	content: none;
+}
+.slick-prev{
+	left: 0;
+	background: url(../images/prev-arrow-gray.svg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+.slick-next{
+    right: 0;
+    background: url(../images/next-arrow-gray.svg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+
+.slick-prev:hover{
+	background: url(../images/prev-arrow-gray-hover.svg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+.slick-next:hover{
+    right: 0;
+    background: url(../images/next-arrow-gray-hover.svg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
