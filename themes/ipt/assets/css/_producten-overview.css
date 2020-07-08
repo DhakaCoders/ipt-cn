@@ -55,16 +55,16 @@
 }
 .producten-overview-items-title-wrap{
 	padding-top: 10px;
+	display: flex;
+	justify-content: center;
 }
 .producten-overview-items-title{
-	display: inline-block;
 	text-transform: none;
 	line-height: 1.2;
 	margin-bottom: 30px;
 	font-size: 24px;
 }
 .producten-overview-items-title a{
-	display: inline-block;
 	text-decoration: none;
 	color: #474747;
 }
@@ -88,8 +88,9 @@
     cursor: pointer;
 }
 .producten-overview-items-btn a:hover{
-	color: #C90808;
+	background-color: #C90808;
 	border-color: #C90808;
+	color: #fff;
 }
 
 
