@@ -164,7 +164,7 @@ if( $('.iptPdSliders').length ){
     $('.iptPdSliders').slick({
       pauseOnHover: false,
       dots: false,
-      infinite: true,
+      infinite: false,
       arrows: true,
       speed: 300,
       centerMode: false,
