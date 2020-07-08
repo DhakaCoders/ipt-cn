@@ -2,7 +2,7 @@
 All Transitions
 */
 a,input,img,textarea,button,svg,
-.ftr-tel a span,.hm-fea-box-item{
+.ftr-tel a span,.hm-fea-box-item,i{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -27,4 +27,32 @@ nav.main-nav ul li:hover > a,
 nav.main-nav ul li.current-menu-item a{
 	color: #C90808;
 }
+
+/*-----buttons hover------ */
+
+/*white transparent button hover*/
+.main-bnr-des-btn-2 a:hover{
+	background: #FF0000;
+	border-color: #FF0000;
+}
+/*blue transparent button hover*/
+.hm-pro-bxe-item-more-link a:hover,
+.hm-overons-sec-des-btn-2 a:hover{
+	background: #000062;
+	color: #fff;
+}
+
+/*gradient button hover*/
+.main-bnr-des-btn-1 a:hover,
+.hm-overons-sec-des-btn-1 a:hover,
+.ftr-top-sec-btn-3 a:hover{
+	background: linear-gradient(-215.68deg, #FF0000 30.23%, #C90707 100%), #C90808;
+}
+
+
+/*text hover color*/
+.ftr-btm-inr a:hover{
+	color: #C90808;
+}
+
 
