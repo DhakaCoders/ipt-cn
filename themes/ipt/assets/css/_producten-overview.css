@@ -4,7 +4,7 @@
 .producten-overview-items-sec{
 	background: #f7f7f7;
 	padding-top: 80px;
-	padding-bottom: 72px;
+	padding-bottom: 73px;
 }
 .producten-overview-items-sec-innr{
 
@@ -24,7 +24,7 @@
 	clear: left;
 }
 .producten-overview-items{
-	padding: 22px;
+	padding: 26px 22px 22px 22px;
 	background: #fff;
 	text-align: center;
 	-webkit-transition: all 0.3s ease-out 0s;
@@ -60,7 +60,7 @@
 	display: inline-block;
 	text-transform: none;
 	line-height: 1.2;
-	margin-bottom: 25px;
+	margin-bottom: 30px;
 	font-size: 24px;
 }
 .producten-overview-items-title a{
@@ -88,7 +88,8 @@
     cursor: pointer;
 }
 .producten-overview-items-btn a:hover{
-	background: green;
+	color: #C90808;
+	border-color: #C90808;
 }
 
 
