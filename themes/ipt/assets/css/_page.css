@@ -34,6 +34,11 @@
     	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
+	opacity: 1!important;
+}
+.slick-prev:focus,
+.slick-next:focus{
+	opacity: 1!important;
 }
 .slick-prev:before,
 .slick-next:before{
@@ -41,25 +46,25 @@
 }
 .slick-prev{
 	left: 0;
-	background: url(../images/prev-arrow-gray.svg);
+	background: url(../images/prev-arrow-gray.svg)!important;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 }
 .slick-next{
     right: 0;
-    background: url(../images/next-arrow-gray.svg);
+    background: url(../images/next-arrow-gray.svg)!important;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 }
 
 .slick-prev:hover{
-	background: url(../images/prev-arrow-gray-hover.svg);
+	background: url(../images/prev-arrow-gray-hover.svg)!important;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 }
 .slick-next:hover{
     right: 0;
-    background: url(../images/next-arrow-gray-hover.svg);
+    background: url(../images/next-arrow-gray-hover.svg)!important;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 }
