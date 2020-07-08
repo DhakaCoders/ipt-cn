@@ -328,3 +328,18 @@ form .dropdown-menu li a{
 .bootstrap-select .dropdown-toggle .filter-option{
 	position: static;
 }
+
+
+/*slider break fix*/
+.hm-overons-sec-des-logos .hm-overons-des-logo,
+.hmReferencesSlider .hmReferencesSlideItem{
+	display: none;
+}
+.hm-overons-sec-des-logos .hm-overons-des-logo:first-child,
+.hmReferencesSlider .hmReferencesSlideItem:first-child{
+	display: block;
+}
+.hm-overons-sec-des-logos.slick-initialized .hm-overons-des-logo,
+.hmReferencesSlider.slick-initialized .hmReferencesSlideItem{
+	display: block;
+}

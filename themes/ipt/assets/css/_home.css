@@ -150,6 +150,12 @@
 	margin: 0 0 25px 0;
 	font-weight: 700;
 }
+.hm-pro-bxe-item-title a{
+	color: #474747;
+}
+.hm-pro-bxe-item-title a:hover{
+	color: #C90808;
+}
 .hm-pro-bxe-item-icon img{
 	display: inline-block;
 	vertical-align: baseline;
@@ -157,6 +163,23 @@
 .hm-overons-des-logo{
 	padding-left: 30px;
 	padding-right: 30px;
+	position: relative;
+}
+.hm-overons-des-logo:after{
+	content: none;
+	position: absolute;
+	height: 80px;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	bottom: 0;
+	right: 0;
+	width: 1px;
+	background: #F4F4F4;
+}
+.hm-overons-sec-des-logos .hm-overons-des-logo.slick-current:after{
+	content: "";
 }
 .hm-pro-bxe-item p{
 	margin-bottom: 30px;
@@ -307,11 +330,8 @@
 	bottom: 0;
 	z-index: 2;
 	width: 55%;
-	/*border-top: 400px solid transparent;
-    border-bottom: 400px solid transparent;
-    border-left: : 400px solid #C90808;
-
-	/*background: linear-gradient(234.01deg, #FF0000 18.2%, #C90707 100%), #C90808;*/
+	/*background: url(../images/hm-our-references-sec-angle.png);
+	background-size: 100% 100%;*/
 }
 .hm-our-references-sec-angle img{
 	min-height: 100%;
@@ -420,6 +440,9 @@
 	position: relative;
 	padding-left: 35px;
 }
+.view-all-references-btn a:hover i{
+	right: 25px;
+}
 .view-all-references-btn a i{
 	position: absolute;
 	top: 50%;
@@ -427,6 +450,7 @@
 	-ms-transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 	right: 30px;
+	margin-top: -2px;
 }
 
 .fl-tab-content{

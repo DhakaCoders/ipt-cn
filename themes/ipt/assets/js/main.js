@@ -154,8 +154,9 @@ var windowWidth = $(window).width();
 var container = $(".container").width();
 var width = windowWidth - container;
 var containerWidth = width / 2;
+var gmdes = containerWidth - 15;
 $(".contact-google-map-des-inr").css({
-  left : containerWidth
+  left : gmdes
 });
 
 

@@ -193,7 +193,6 @@
 	max-width: 180px;
 	width: 100%;
 	height: 56px;
-	border: 2px solid #C90808!important;
 	background: linear-gradient(215.68deg, #FF0000 30.23%, #C90707 100%), #C90808;
 	font-size: 14px;
 	line-height: 18px;
@@ -210,9 +209,7 @@
 	border-radius: 8px;
 }
 .ipt-contact-form-sec .wpforms-form .wpforms-submit-container button:hover{
-	background: transparent;
-	color: #C90808;
-	border-color: #C90808 !important;
+	background: #C90808;
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -258,8 +255,10 @@
 .google-map-sec{
 	position: relative;
 }
-.google-map-sec iframe{
+.google-map iframe{
 	width: 100%;
+	height: 600px;
+	vertical-align: bottom;
 }
 .contact-google-map-des{
 	position: absolute;
@@ -317,14 +316,16 @@
 	font-weight: 600;
 }
 .cnt-gm-location a:hover{
-	color: #C90808;
+	color: #000062;
 }
-.cnt-gm-opening-hours strong{
+.cnt-gm-opening-hours ul li{
+	padding-bottom: 15px;
+}
+.cnt-gm-opening-hours ul li strong{
 	display: block;
 	font-size: 12px;
 	line-height: 20px;
 	color: #A8A8A8;
 	text-transform: uppercase;
-	margin-bottom: 16px;
 	font-weight: 600;
 }
