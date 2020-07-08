@@ -33,6 +33,7 @@
 	line-height: 1;
 	margin-bottom: 16px;
 	display: inline-block;
+	text-transform: uppercase;
 }
 .referenties-references-tab-btns{
 	border-bottom: 2px solid #f4f4f4;
