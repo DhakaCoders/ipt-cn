@@ -101,7 +101,7 @@
 }
 
 .ipt-contact-entry-hdr p{
-	margin-bottom: 38px;
+	margin-bottom: 40px;
 }
 
 
@@ -142,13 +142,12 @@
 	display: inline-block;
 	vertical-align: baseline;
 	width: 100%;
-	margin: 0;
+	margin: 0 0 10px 0;
 	font-size: 14px;
 	line-height: 16px;
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #474747;
-	margin-bottom: 10px;
 }
 .ipt-contact-form-sec .wpforms-form .wpforms-field-container .wpforms-field input{
 	width: 100%;
@@ -157,7 +156,7 @@
 	background: #FFFFFF;
 	border: 2px solid #EFEFEF;
 	box-sizing: border-box;
-	padding: 24px 16px 24px;
+	padding: 20px 16px 20px;
 	color: #787878;
 	font-weight: 500;
 	font-size: 14px;
@@ -246,11 +245,9 @@
 	font-size: 14px;
 	line-height: 16px;
 	color: #B9B9B9;
-	margin: 0;
+	margin: 5px 0 10px 0;
 	font-weight: 500;
 	text-align: center;
-	margin-top: 5px;
-	margin-bottom: 10px;
 }
 
 
