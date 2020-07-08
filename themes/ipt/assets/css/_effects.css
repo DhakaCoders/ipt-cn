@@ -45,7 +45,9 @@ nav.main-nav ul li.current-menu-item a{
 /*gradient button hover*/
 .main-bnr-des-btn-1 a:hover,
 .hm-overons-sec-des-btn-1 a:hover,
-.ftr-top-sec-btn-3 a:hover{
+.ftr-top-sec-btn-3 a:hover,
+.ipt-contact-form-sec .wpforms-form .wpforms-submit-container button:hover,
+.ipt-pd-wel-des a:hover{
 	background: linear-gradient(-215.68deg, #FF0000 30.23%, #C90707 100%), #C90808;
 }
 
