@@ -84,6 +84,13 @@
 	max-width: 28%;
 	width: 100%;
 	padding-left: 33px;
+	position: relative;
+}
+.referenties-details-right-slider .rdls-arrows .rdls-lft-arrow{
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
 }
 .referenties-details-thumbnail-slider{
 
