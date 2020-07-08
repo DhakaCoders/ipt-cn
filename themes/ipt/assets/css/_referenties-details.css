@@ -86,11 +86,24 @@
 	padding-left: 33px;
 	position: relative;
 }
-.referenties-details-right-slider .rdls-arrows .rdls-lft-arrow{
+.rdls-thumbnail-arrows{
+	display: block;
+	height: 100%;
+	width: 30px;
 	position: absolute;
 	left: 50%;
 	top: 0;
+	margin-left: 21px;
 	transform: translateX(-50%);
+	z-index: 11;
+}
+.rdls-thumbnail-arrows .rdls-lft-arrow{
+	transform: rotate(90deg);
+}
+.rdls-thumbnail-arrows .rdls-rgt-arrow{
+	transform: rotate(90deg);
+	bottom: 32px;
+	position: absolute;
 }
 .referenties-details-thumbnail-slider{
 

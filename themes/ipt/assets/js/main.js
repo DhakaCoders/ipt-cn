@@ -197,6 +197,8 @@ $('.referentiesDetailsThumbnailSlider').slick({
   vertical: true,
   arrows: true,
   verticalSwiping: true,
+  prevArrow: $('rdls-lft-arrow'),
+  nextArrow: $('rdls-rgt-arrow'),
   prevArrow: false,
   focusOnSelect: true,
   infinite: true,
