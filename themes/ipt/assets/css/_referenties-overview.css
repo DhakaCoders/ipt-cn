@@ -70,6 +70,9 @@
 .referenties-pagination-innr{
 
 }
+.rs-overview-wrap{
+	display: block!important;
+}
 .fl-pagi-ctlr{
 	padding-top: 32px;
 }
