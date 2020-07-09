@@ -218,3 +218,49 @@
     padding-top: 125px;
     padding-bottom: 0px;
 }
+
+
+@media(max-width: 1499px){
+
+}
+
+@media(max-width: 1399px){
+	
+}
+
+@media(max-width: 1299px){
+
+}
+
+@media(max-width: 1199px){
+	.back-link-sec-inr {
+	    padding: 30px 0;
+	}
+
+}
+
+@media(max-width: 991px){
+	
+
+	
+}
+
+@media(max-width: 767px){
+	.back-link-sec{
+		display: none;
+	}
+}
+
+@media(max-width: 575px){
+	
+
+}
+
+@media(max-width: 479px){
+
+
+}
+
+@media(max-width: 359px){
+
+}

@@ -494,5 +494,8 @@
 }
 
 @media(max-width: 359px){
-
+	.ipt-contact-form-sec .wpforms-form 
+	.wpforms-field-container .wpforms-has-error label.wpforms-error {
+	    font-size: 10px;
+	}
 }
