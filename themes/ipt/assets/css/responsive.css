@@ -29,6 +29,22 @@
 	.show-md{
 		display: block!important;
 	}
+	h1{
+		font-size: 50px;
+	}
+	h2{
+		font-size: 40px;
+	}
+	h3{
+		font-size: 30px;
+	}
+	h4{
+		font-size: 24px;
+	}
+	h5{
+		font-size: 14px;
+	}
+
 	
 }
 
@@ -38,6 +54,21 @@
 	}
 	.show-sm{
 		display: block!important;
+	}
+	h1{
+		font-size: 45px;
+	}
+	h2{
+		font-size: 36px;
+	}
+	h3{
+		font-size: 30px;
+	}
+	h4{
+		font-size: 24px;
+	}
+	h5{
+		font-size: 14px;
 	}
 }
 
