@@ -47,6 +47,7 @@
 	padding-top: 16px;
 	display: flex;
 	justify-content: space-between;
+	padding-bottom: 35px;
 }
 .referenties-details-left-slider{
 	max-width: 72%;
@@ -108,14 +109,18 @@
 }
 .referenties-details-thumbnail-slider{
 	overflow: hidden;
-}
-.referenties-details-thumbnail-slider:last-of-type{
-	margin-bottom: 0!important;
+	margin-top: -17px;
+	margin-bottom: -17px;
 }
 .referenties-details-thumbnail-slider-items{
-	height: 285px!important;
+	height: 301px!important;
 	width: 100%!important;
-	margin-bottom: 34px;
+	padding-top: 17px;
+	padding-bottom: 17px;
+}
+.rdt-slider-items{
+	width: 100%!important;
+	height: 100%!important;
 }
 
 .Beschrijving{
