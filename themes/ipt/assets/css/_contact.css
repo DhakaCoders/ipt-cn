@@ -364,11 +364,11 @@
 	font-weight: 600;
 }
 
-.google-map-sec.default-page-con ul, .google-map-sec ul {
+.dft-map ul, .dft-map ul {
     padding-left: 0!important;
     padding-bottom: 0!important;
 }
-.google-map-sec.default-page-con ul li, .google-map-sec ul li {
+.dft-map ul li, .dft-map ul li {
     padding: 0px 0 15px 0px !important;
 }
 
@@ -454,6 +454,15 @@
 	.contact-google-map-des-inr:before,
 	.contact-google-map-des-inr:after{
 	    content: none;
+	}
+	.dft-map {
+	    margin-left: -20px;
+	    margin-right: -20px;
+	}
+	.dft-map .contact-google-map-des-ctlr {
+	    bottom: 25px!important;
+	    top: initial!important;
+	    left: 25px!important;
 	}
 
 }
