@@ -44,7 +44,9 @@
 	h5{
 		font-size: 14px;
 	}
-
+	.dfp-promo-module-title{
+		font-size: 35px;
+	}
 	
 }
 
@@ -69,6 +71,9 @@
 	}
 	h5{
 		font-size: 14px;
+	}
+	.dfp-promo-module-title{
+		font-size: 30px;
 	}
 	.container,
 	.container-xlg,

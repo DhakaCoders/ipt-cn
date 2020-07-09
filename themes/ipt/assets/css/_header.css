@@ -6,7 +6,6 @@
 	position: relative;
 	padding: 30px 65px 0;
 	display: flex;
-	justify-content: flex-end;
 }
 .hdr-lft{
 	position: absolute;
