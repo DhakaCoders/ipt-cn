@@ -199,6 +199,7 @@
 	margin-right: auto;
 	text-transform: uppercase;
 	font-weight: 700;
+	margin-bottom: 0;
 }
 
 .hm-overons-section{
@@ -299,17 +300,18 @@
 	border-bottom: 2px solid #F4F4F4;
 	padding: 48px 0 18px;
 	margin-bottom: 75px;
+	overflow: hidden;
 }
 .hm-client-logos-sec-cntlr ul{
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	text-align: center;
 }
 .hm-client-logos-sec-cntlr ul{
 	margin: 0 -45px;
 }
 .hm-client-logos-sec-cntlr ul li{
 	padding: 0 45px 30px;
+	display: inline-block;
+	vertical-align: baseline;
 }
 .hm-client-logos-sec-cntlr ul li > div{
 	display: flex;
@@ -498,6 +500,8 @@
 
 }
 
+
+
 @media(max-width: 1399px){
 	.main-bnr-title{
 		font-size: 52px;
@@ -508,6 +512,15 @@
 	.hm-pro-bxe-item-title {
 	    font-size: 24px;
 	}
+	.hm-overons-sec-des{
+		padding-left: 65px;
+	}
+	.hm-overons-sec-des-title{
+		font-size: 33px;
+	}
+	.hm-overons-sec-des-sub-title{
+		font-size: 17px;
+	}
 }
 
 @media(max-width: 1299px){
@@ -516,6 +529,9 @@
 	}
 	.main-brn-sub-title{
 		font-size: 27px;
+	}
+	.hm-pro-bxe-item-more-link a{
+		max-width: 295px;
 	}
 }
 
@@ -534,7 +550,25 @@
 	.hm-fea-box-item-title{
 		font-size: 18px;
 	}
-
+	.hm-pro-bxe-item{
+		padding-top: 80px;
+	}
+	.hm-pro-bxe-item-more-link a {
+	    max-width: 260px;
+	    font-size: 13px;
+	}
+	.hm-overons-sec-des-title {
+	    font-size: 30px;
+	}
+	.hm-overons-sec-des-sub-title {
+	    font-size: 16px;
+	}
+	.hm-overons-sec-des-btn-2 a{
+		max-width: 205px;
+	}
+	.hm-overons-section {
+	    padding: 80px 0 90px;
+	}
 }
 
 @media(max-width: 991px){
@@ -572,7 +606,34 @@
 		top: initial!important;
 		transform: initial!important;
 	}
-	
+	.hmProBxesSlide {
+	    width: 50%;
+	}
+	.hmProBxesSlide:nth-child(2n+2) .hm-pro-bxe-item{
+		background: #c90808;
+		color: #fff;
+	}
+	.hmProBxesSlide:nth-child(2n+2) .hm-pro-bxe-item-title a{
+		color: #fff;
+	}
+	.hmProBxesSlide:nth-child(2n+2) .hm-pro-bxe-item-icon i svg{
+		fill: #fff;
+	}
+	.hmProBxesSlide:nth-child(2n+2) .hm-pro-bxe-item-more-link a{
+		color: #fff;
+		border-color: #fff;
+	}
+	.hm-overons-sec-inr{
+		display: block;
+	}
+	.hm-overons-sec-fea-img-cntlr{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.hm-overons-sec-des{
+		width: 100%;
+		padding: 0;
+	}
 }
 
 @media(max-width: 767px){
@@ -589,6 +650,23 @@
 		display: none;
 	}
 
+
+}
+
+@media(max-width: 639px){
+	.hmProBxesSlide {
+	    width: 100%;
+	}
+	.hm-pro-bxe-item-more-link a{
+		border-color: #474747;
+		color: #474747;
+	}
+	.hm-pro-bxe-item-icon i svg{
+		fill: #474747;
+	}
+	.hm-pro-bxe-item{
+		padding: 75px 20px 75px;
+	}
 }
 
 @media(max-width: 575px){
@@ -604,7 +682,30 @@
 	.hm-fea-box-item-icon i svg{
 		fill: #C90808!important;
 	}
-
+	.hm-overons-sec-des-logos .slick-next{
+		background: url(../images/next-arrow-xs.png)!important;
+		background-repeat: no-repeat!important;
+		background-size: 100% auto!important;
+	}
+	.hm-overons-sec-des-logos .slick-prev{
+		background: url(../images/prev-arrow-xs.png)!important;
+		background-repeat: no-repeat!important;
+		background-size: 100% auto!important;
+	}
+	.hm-overons-sec-des > p{
+		text-align: center;
+	}
+	.hm-overons-sec-des-btns{
+		text-align: center;
+	}
+	.hm-client-logos-sec-cntlr ul li{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.hm-client-logos-sec-cntlr ul{
+		margin-left: -20px;
+		margin-right: -20px;
+	}
 }
 
 @media(max-width: 479px){
