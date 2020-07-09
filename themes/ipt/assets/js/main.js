@@ -152,10 +152,10 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 var container = $(".container").width();
-var width = windowWidth - container;
-var containerWidth = width / 2;
-var gmdes = containerWidth - 15;
-$(".contact-google-map-des-inr").css({left : gmdes});
+var sidewidth = windowWidth - container;
+var leftsidewidth = sidewidth / 2;
+//var gmdesWidth = leftsidewidth - 15;
+$(".contact-google-map-des-ctlr").css({left : leftsidewidth});
 
 
 if( $('.iptPdSliders').length ){
