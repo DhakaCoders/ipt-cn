@@ -345,8 +345,9 @@ Gallery design
 }
 .table-dsc table thead th span{
 	font-weight: 600;
-	font-size: 18px;
-	line-height: 30px
+	font-size: 14px;
+	line-height: 1;
+	text-transform: uppercase;
 }
 .table-dsc table thead tr th,
 .table-dsc table tbody tr td{
@@ -501,6 +502,7 @@ Gallery design
 	.dfp-tbl-wrap{
 		margin-bottom: 40px;
 	}
+	
 }
 
 

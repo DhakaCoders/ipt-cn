@@ -25,6 +25,9 @@
 	font-size: 14px;
 	line-height: 1
 }
+.ftr-btm-inr p{
+	margin-bottom: 0;
+}
 
 .ftr-btm-inr a{
 	margin-left: auto;
@@ -153,3 +156,160 @@
 .ftr-top-sec-btn a:hover i svg{
 	fill: #C90808;
 }
+
+
+
+
+
+
+@media(max-width: 1499px){
+
+}
+
+@media(max-width: 1399px){
+	.ftr-col{
+		width: 24%;
+	}
+	.ftr-col-1 {
+	    width: 30%;
+	}
+	.ftr-col-2 {
+	    width: 21%;
+	}
+}
+
+@media(max-width: 1299px){
+
+}
+
+@media(max-width: 1199px){
+	.ftr-btm {
+	    padding: 50px 0;
+	}
+	.ftr-col {
+	    width: 29%;
+	}
+
+	.ftr-col-1 {
+	    width: 28%;
+	}
+	.ftr-col-2 {
+	    width: 21%;
+	}
+	.ftr-col-3 {
+	    width: 22%;
+	}
+	.ftr-top{
+		padding: 75px 0 80px;
+	}
+	.loc-address a br{
+		display: none;
+	}
+}
+
+@media(max-width: 991px){
+	.ftr-btm {
+	    padding: 45px 0;
+	}
+	.ftr-col.ftr-col-1{
+		width: 100%;
+		text-align: center;
+		padding-bottom: 35px;
+	}
+	.ftr-col{
+		width: 33.3333%;
+	}
+	.ftr-col.ftr-col-2{
+		width: 30%;
+	}
+	.ftr-col.ftr-col-3{
+		width: 30%;
+	}
+	.ftr-col.ftr-col-4{
+		width: 40%;
+	}
+	
+}
+
+@media(max-width: 767px){
+	.ftr-col.ftr-col-1{
+		padding-bottom: 60px;
+	}
+	.ftr-col ul{
+		padding-bottom: 35px;
+	}
+	.ftr-col{
+		width: 100%!important;
+		text-align: center;
+	}
+	.ftr-col{
+		padding-bottom: 25px;
+	}
+	.ftr-logo {
+	    margin-top: 0;
+	}
+	.ftr-top{
+		padding: 60px 0 20px;
+	}
+	.ftr-col ul li:last-child{
+		padding-bottom: 0;
+	}
+	.ftr-col-title span{
+		position: relative;
+		padding-right: 20px;
+		display: inline-block;
+		vertical-align: baseline;
+	}
+	span.show-sm{
+		display: inline-block!important;
+	}
+	.ftr-col-title span:after{
+		content: "";
+		position: absolute;
+		top: -2px;
+		right: 0;
+		background: url(../images/up-arrow-white.png);
+		width: 16px;
+		height: 16px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 100% auto;
+	}
+	.ftr-col-title.active span:after{
+		
+		background: url(../images/down-arrow-white.png);
+		width: 16px;
+		height: 16px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 100% auto;
+	}
+	.ftr-col ul li a br{
+		display: none;
+	}
+	.ftr-btm-inr {
+	    display: block;
+	    text-align: center;
+	}
+	.ftr-btm-inr p{
+		padding-bottom: 27px;
+	}
+	.ftr-btm-inr a{
+		color: #787878;
+	}
+}
+
+@media(max-width: 575px){
+
+
+}
+
+@media(max-width: 479px){
+
+
+}
+
+@media(max-width: 359px){
+
+}
+

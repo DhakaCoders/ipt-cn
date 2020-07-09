@@ -150,14 +150,12 @@ google.maps.event.addDomListener(window, 'load', initialize);
 }
 
 
-var windowWidth = $(window).width();
+
 var container = $(".container").width();
 var width = windowWidth - container;
 var containerWidth = width / 2;
 var gmdes = containerWidth - 15;
-$(".contact-google-map-des-inr").css({
-  left : gmdes
-});
+$(".contact-google-map-des-inr").css({left : gmdes});
 
 
 if( $('.iptPdSliders').length ){
@@ -313,6 +311,35 @@ $('.tp-tabs .tab-btn').click(function(){
     $(this).addClass('current');
     $("#"+tab_id).addClass('current');
 });
+
+
+if (windowWidth <= 767) {
+  $('.ftr-col h5').on('click', function(){
+    $(this).toggleClass('active');
+    $(this).parent().siblings().find('h6').removeClass('active');
+    $(this).parent().siblings().find('ul').slideUp(300);
+    $(this).parent().find('ul').slideToggle(300);
+    
+  });
+
+
+  $('.nav-opener').on('click', function(){
+    $('.xs-popup-menu').fadeIn(500);
+    $('.xs-popup-menu').addClass('add-cls-show');
+  });
+  $('.xs-menu-close-btn-controller').on('click', function(){
+    $('.xs-popup-menu').fadeOut(500);
+    $('.xs-popup-menu').removeClass('add-cls-show');
+  });
+
+  $('.xs-main-nav > ul > li.menu-item-has-children > a').on('click', function(e){
+    e.preventDefault();
+    $(this).parent().find('ul.sub-menu').slideToggle(500);
+    $(this).toggleClass('sub-menu-expend')
+  });
+}
+
+
 
 //alert();
 

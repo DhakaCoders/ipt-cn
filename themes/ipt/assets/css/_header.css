@@ -584,9 +584,6 @@ nav.main-nav ul.sub-menu li:hover:after {
 		display: flex;
 		align-items: center;
 	}
-	.xs-ftr-tel{
-		margin-left: auto;
-	}
 	.nav-opener {
 		cursor: pointer;
 		z-index: 1;
@@ -665,7 +662,7 @@ nav.main-nav ul.sub-menu li:hover:after {
 		right: 0;
 		bottom: 0;
 	    z-index: 100;
-	    background: #232531;
+	    background: #353638;
 	    padding: 20px 0 0 0;
 	    text-align: center;
 	    color: #fff;
@@ -750,7 +747,7 @@ nav.main-nav ul.sub-menu li:hover:after {
 	}
 
 	.xs-menu-close-btn-controller{
-		background: #1A1C27;
+		background: #222224;
 		padding: 15px 0 25px;
 		margin-left: -20px;
 		margin-right: -20px;
