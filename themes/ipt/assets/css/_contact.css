@@ -28,6 +28,7 @@
 }
 .breadcrumbs ul li{
 	display: inline-block;
+	vertical-align: baseline;
 	padding-left: 30px;
 	padding-right: 30px;
 	position: relative;
@@ -47,7 +48,8 @@
 	height: 12px;
 	width: 12px;
 }
-.breadcrumbs ul li.active a:before{
+.breadcrumbs ul li.active a:before,
+.xs-breadcrumbs ul li:first-child a:before{
 	content: "";
 	position: absolute;
 	left: 0;
@@ -62,14 +64,43 @@
 .breadcrumbs ul li:first-child:after{
 	content: none;
 }
-.breadcrumbs ul li a{
+.breadcrumbs ul li a,
+.xs-breadcrumbs ul li a{
 	color: #fff;
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	-ms-transition: all 0.5s;
 }
-.breadcrumbs ul li a:hover{
+.breadcrumbs ul li a:hover,
+.xs-breadcrumbs ul li a:hover{
 	color: #C90808;
+}
+
+.xs-breadcrumbs ul li{
+	display: inline-block;
+	vertical-align: baseline;
+	padding-left: 15px;
+}
+.xs-breadcrumbs ul li:first-child{
+	float: left;
+	position: relative;
+}
+.xs-breadcrumbs ul li:last-child{
+	float: right;
+	padding-left: 25px;
+	position: relative;
+}
+.xs-breadcrumbs ul li:last-child a i{
+	position: absolute;
+	top: 42%;
+	left: 0;
+	transform: translateY(-50%);
+}
+.xs-breadcrumbs ul li:last-child a:hover i svg{
+	fill: #C90808;
+}
+.xs-breadcrumbs{
+	display: none;
 }
 
 
@@ -323,4 +354,117 @@
 	color: #A8A8A8;
 	text-transform: uppercase;
 	font-weight: 600;
+}
+
+
+
+/*responsive*/
+
+@media(max-width: 1499px){
+
+}
+
+@media(max-width: 1399px){
+	
+}
+
+@media(max-width: 1299px){
+
+}
+
+@media(max-width: 1199px){
+	.page-banner-des {
+	    padding-top: 100px;
+	}
+	.ipt-contact-form-sec {
+	    padding-top: 60px;
+	    padding-bottom: 55px;
+	}
+
+}
+
+@media(max-width: 991px){
+	.ipt-contact-entry-hdr p br{
+	    display: none;
+	}
+	.contact-google-map-des-inr {
+	    padding: 30px 30px 22px;
+	}
+	.cnt-gm-title {
+	    margin-bottom: 30px;
+	}
+	
+}
+
+@media(max-width: 767px){
+	.breadcrumbs{
+		display: none!important;
+	}
+	.xs-breadcrumbs{
+		display: block!important;
+		padding-top: 20px;
+	}
+	.page-banner-des {
+	    padding-top: 90px;
+	}
+	.page-banner-title {
+	    font-size: 45px;
+	}
+	.page-banner-controller {
+	    min-height: 250px;
+	}
+	.page-banner-bg {
+	    height: 250px;
+	}
+	.ipt-contact-form-sec {
+	    padding-top: 50px;
+	    padding-bottom: 50px;
+	}
+	.ipt-cnt-entry-title {
+	    font-size: 28px;
+	}
+	.ipt-contact-form-sec .wpforms-form .wpforms-field-container .wpforms-field {
+	    width: 100%;
+	}
+	.VrnCustomField, 
+	.telField {
+	    padding-right: 0;
+	}
+	.atnnCustomField, 
+	.mailField {
+	    padding-left: 0;
+	}
+	.contact-google-map-des{
+		position: absolute!important;
+	    bottom: 25px!important;
+	}
+	.contact-google-map-des-inr:before {
+	    content: none;
+	}
+
+}
+
+@media(max-width: 575px){
+	.page-banner-title {
+	    font-size: 32px;
+	}
+	.page-banner-controller {
+	    min-height: 225px;
+	}
+	.page-banner-bg {
+	    height: 225px;
+	}
+
+	.ipt-cnt-entry-title {
+	    font-size: 22px;
+	}
+}
+
+@media(max-width: 479px){
+
+
+}
+
+@media(max-width: 359px){
+
 }
