@@ -290,6 +290,14 @@
 	position: absolute;
 	top: 100px;
 }
+.dft-map{
+	position: relative;
+}
+.dft-map .contact-google-map-des-ctlr{
+	position: absolute;
+	top: 100px;
+	left: 90px!important;
+}
 
 .contact-google-map-des-inr{
 	padding: 40px 35px 22px;
@@ -395,12 +403,6 @@
 	.ipt-contact-entry-hdr p br{
 	    display: none;
 	}
-	.contact-google-map-des-inr {
-	    padding: 30px 30px 22px;
-	}
-	.cnt-gm-title {
-	    margin-bottom: 30px;
-	}
 	
 }
 
@@ -442,11 +444,15 @@
 	.mailField {
 	    padding-left: 0;
 	}
-	.contact-google-map-des{
-		position: absolute!important;
-	    bottom: 25px!important;
+	.google-map iframe {
+	    height: 935px!important;
 	}
-	.contact-google-map-des-inr:before {
+	.contact-google-map-des-ctlr {
+	    bottom: 25px!important;
+	    top: initial!important;
+	}
+	.contact-google-map-des-inr:before,
+	.contact-google-map-des-inr:after{
 	    content: none;
 	}
 
@@ -469,7 +475,12 @@
 }
 
 @media(max-width: 479px){
-
+	.contact-google-map-des-inr {
+	    padding: 30px 20px 10px;
+	}
+	.cnt-gm-title {
+	    margin-bottom: 30px;
+	}
 
 }
 
