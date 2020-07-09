@@ -75,7 +75,6 @@
 
 </head>
 <body>
-<div class="bdoverlay"></div>
 <header class="header">
   <div class="header-inr clearfix">
     <div class="hdr-lft">
@@ -85,14 +84,6 @@
     </div>
     <div class="hdr-rgt">
       <div class="hdr-navbar clearfix">
-        <div class="hdr-humberger">
-          <div class="line-icon show-md active-collapse">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <strong class="menu-txt show-md">Menu</strong>
-        </div>
         <div class="main-nav-cntlr">
           <div class="main-nav-cntlr-inr">
             <div class="hdr-topbar">
@@ -104,17 +95,19 @@
               </div>
               <div class="fl-lang reset-slect">
                 <label>Taal:</label>
-                <select class="selectpicker">
-                  <option selected>Nederlands</option>
-                  <option>English</option>
-                </select>
+                <div class="fl-lang-cntlr">
+                  <ul class="reset-list hide-sm">
+                    <li class="lang-active"><a href="#">Nederlands</a></li>
+                    <li><a href="#">English</a></li>
+                  </ul>
+                  <ul class="reset-list show-sm">
+                    <li class="lang-active"><a href="#">NL</a></li>
+                    <li><a href="#">En</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <nav class="main-nav">
-              <div class="closebtn show-md">
-                <span></span>
-                <span></span>
-              </div>
+            <nav class="main-nav clearfix">
               <ul class="clearfix reset-list">
                 <li class="current-menu-item"><a href="#">Home</a></li>
                 <li class="menu-item-has-children">
@@ -126,7 +119,7 @@
                     <li><a href="#">Sub menu item 4</a></li>
                   </ul>
                 </li>
-                <li><a href="#">referenties</a></li>
+                <li><a href="#">Referenties</a></li>
               </ul>
             </nav>
           </div>
@@ -380,17 +373,22 @@
               </div>
             </div>
             <div class="ftr-col ftr-col-2">
-              <h5 class="ftr-col-title">Navigatie</h5>
+              <h5 class="ftr-col-title">
+                <span>Navigatie</span>
+              </h5>
               <ul class="reset-list">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Producten</a></li>
-                <li><a href="#">referenties</a></li>
+                <li><a href="#">Referenties</a></li>
                 <li><a href="#">Over ons</a></li>
                 <li><a href="#">Contact</a></li>
               </ul>
             </div>
             <div class="ftr-col ftr-col-3">
-              <h5 class="ftr-col-title">Andere</h5>
+              <h5 class="ftr-col-title">
+                <span class="hide-sm">Andere</span> 
+                <span class="show-sm">Other</span>
+              </h5>
               <ul class="reset-list">
                 <li><a href="#">Privacy Policy</a></li>
                 <li><a href="#">Cookie Policy</a></li>
@@ -399,9 +397,12 @@
               </ul>
             </div>
             <div class="ftr-col ftr-col-4">
-              <h5 class="ftr-col-title">Industrial Textile Products</h5>
+              <h5 class="ftr-col-title">
+                <span class="hide-sm">Industrial Textile Products</span> 
+                <span class="show-sm">Contact</span>
+              </h5>
               <ul class="reset-list">
-                <li><a href="#">Evenbroekveld 44 <br>B-9420 Erpe-Mere<br> België</a></li>
+                <li class="loc-address"><a href="#">Evenbroekveld 44 <br>B-9420 Erpe-Mere<br> België</a></li>
                 <li><a href="#">info@itp.eu</a></li>
                 <li class="ftr-tel"><a href="#">T <span>+32(0)53 80 49 12</span></a></li>
                 <li><a href="#">F +32(0)53 78 02 56</a></li>
@@ -438,11 +439,6 @@
         </div>
         <strong>MENU</strong>
     </div>
-    <div class="xs-ftr-tel">
-      <a href="#">
-        <img src="assets/images/xs-ftr-tel.png">
-      </a>
-    </div>
    </div>
   </div>
 </div>
@@ -451,13 +447,12 @@
        <div class="xs-logo">
           <div class="ftr-logo">
             <a href="#">
-              <img src="assets/images/ftr-logo.png" alt="">
-              <strong>Gebroeders Van Damme N.V.</strong>
-              <span>Passion for life</span>
+              <img src="assets/images/logo.png">
             </a>
           </div>
        </div>
         <nav class="xs-main-nav">
+
           <ul class="clearfix reset-list">
             <li class="current-menu-item"><a href="#">Home</a></li>
             <li class="menu-item-has-children">
@@ -469,43 +464,11 @@
                 <li><a href="#">Sub menu item 4</a></li>
               </ul>
             </li>
-            <li><a href="#">referenties</a></li>
+            <li><a href="#">Referenties</a></li>
+            <li><a href="#">Over ons</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
         </nav>
-        <div class="xs-menu-info">
-          <a href="#">Offerte aanvragen</a>
-        </div>
-        <div class="pop-up-ftr-socail-icons">
-          <ul class="reset-list clearfix">
-            <li>
-              <a href="#">
-                <i>
-                  <svg class="ftr-facebook-icon-svg" width="12" height="22" viewBox="0 0 12 22" fill="white">
-                    <use xlink:href="#ftr-facebook-icon-svg"></use>
-                  </svg> 
-                </i>
-              </a>
-           </li>
-            <li>
-              <a href="#">
-                <i>
-                  <svg class="ftr-twiter-icon-svg" width="22" height="18" viewBox="0 0 22 18" fill="white">
-                    <use xlink:href="#ftr-twiter-icon-svg"></use>
-                  </svg> 
-                </i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i>
-                  <svg class="ftr-instagram-icon-svg" width="22" height="22" viewBox="0 0 22 22" fill="white">
-                    <use xlink:href="#ftr-instagram-icon-svg"></use>
-                  </svg> 
-                </i>
-              </a>
-            </li>
-          </ul>
-        </div>
         <div class="xs-menu-close-btn-controller">
            <div class="fl-close-btn">
              <span></span>

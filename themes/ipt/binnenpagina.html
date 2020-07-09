@@ -65,7 +65,6 @@
 
 </head>
 <body>
-<div class="bdoverlay"></div>
 <header class="header">
   <div class="header-inr clearfix">
     <div class="hdr-lft">
@@ -75,14 +74,6 @@
     </div>
     <div class="hdr-rgt">
       <div class="hdr-navbar clearfix">
-        <div class="hdr-humberger">
-          <div class="line-icon show-md active-collapse">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <strong class="menu-txt show-md">Menu</strong>
-        </div>
         <div class="main-nav-cntlr">
           <div class="main-nav-cntlr-inr">
             <div class="hdr-topbar">
@@ -95,18 +86,18 @@
               <div class="fl-lang reset-slect">
                 <label>Taal:</label>
                 <div class="fl-lang-cntlr">
-                  <ul class="reset-list">
+                  <ul class="reset-list hide-sm">
                     <li class="lang-active"><a href="#">Nederlands</a></li>
                     <li><a href="#">English</a></li>
+                  </ul>
+                  <ul class="reset-list show-sm">
+                    <li class="lang-active"><a href="#">NL</a></li>
+                    <li><a href="#">En</a></li>
                   </ul>
                 </div>
               </div>
             </div>
             <nav class="main-nav clearfix">
-              <div class="closebtn show-md">
-                <span></span>
-                <span></span>
-              </div>
               <ul class="clearfix reset-list">
                 <li class="current-menu-item"><a href="#">Home</a></li>
                 <li class="menu-item-has-children">
@@ -537,12 +528,21 @@
           </div>
        </div>
         <nav class="xs-main-nav">
+
           <ul class="clearfix reset-list">
-             <li><a href="#">Home</a></li>
-              <li><a href="#">Producten</a></li>
-              <li><a href="#">Referenties</a></li>
-              <li><a href="#">Over ons</a></li>
-              <li><a href="#">Contact</a></li>
+            <li class="current-menu-item"><a href="#">Home</a></li>
+            <li class="menu-item-has-children">
+              <a href="#">Producten</a>
+              <ul class="sub-menu">
+                <li><a href="#">Sub menu item 1</a></li>
+                <li><a href="#">Sub menu item 2</a></li>
+                <li><a href="#">Sub menu item 3</a></li>
+                <li><a href="#">Sub menu item 4</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Referenties</a></li>
+            <li><a href="#">Over ons</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
         </nav>
         <div class="xs-menu-close-btn-controller">

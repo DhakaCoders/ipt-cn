@@ -205,11 +205,15 @@
 	.loc-address a br{
 		display: none;
 	}
+	.home .footer-wrp {
+	    padding-left: 15px;
+	    padding-bottom: 20px;
+	}
 }
 
 @media(max-width: 991px){
 	.ftr-btm {
-	    padding: 45px 0;
+	    padding: 45px 0 110px;
 	}
 	.ftr-col.ftr-col-1{
 		width: 100%;
