@@ -56,7 +56,8 @@ nav.main-nav ul li.current-menu-item a{
 
 
 /*text hover color*/
-.ftr-btm-inr a:hover{
+.ftr-btm-inr a:hover,
+.producten-overview-items-title a:hover{
 	color: #C90808;
 }
 
