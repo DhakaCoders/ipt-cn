@@ -38,7 +38,8 @@ nav.main-nav ul li.current-menu-item a{
 /*blue transparent button hover*/
 .producten-overview-items-btn a:hover,
 .hm-pro-bxe-item-more-link a:hover,
-.hm-overons-sec-des-btn-2 a:hover{
+.hm-overons-sec-des-btn-2 a:hover,
+.hm-pro-bxe-item-more-link a:hover{
 	background: #000062;
 	color: #fff;
 }
