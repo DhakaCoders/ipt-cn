@@ -356,6 +356,14 @@
 	font-weight: 600;
 }
 
+.google-map-sec.default-page-con ul, .google-map-sec ul {
+    padding-left: 0!important;
+    padding-bottom: 0!important;
+}
+.google-map-sec.default-page-con ul li, .google-map-sec ul li {
+    padding: 0px 0 15px 0px !important;
+}
+
 
 
 /*responsive*/
