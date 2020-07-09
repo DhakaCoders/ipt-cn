@@ -396,12 +396,19 @@
 	    padding-top: 60px;
 	    padding-bottom: 55px;
 	}
+	.page-banner-title {
+	    font-size: 53px;
+	}
+	
 
 }
 
 @media(max-width: 991px){
 	.ipt-contact-entry-hdr p br{
 	    display: none;
+	}
+	.page-banner-title {
+	    font-size: 50px;
 	}
 	
 }
@@ -469,7 +476,7 @@
 
 @media(max-width: 575px){
 	.page-banner-title {
-	    font-size: 32px;
+	    font-size: 40px;
 	}
 	.page-banner-controller {
 	    min-height: 225px;
@@ -490,6 +497,9 @@
 	.cnt-gm-title {
 	    margin-bottom: 30px;
 	}
+	.page-banner-title {
+	    font-size: 35px;
+	}
 
 }
 
@@ -497,5 +507,8 @@
 	.ipt-contact-form-sec .wpforms-form 
 	.wpforms-field-container .wpforms-has-error label.wpforms-error {
 	    font-size: 10px;
+	}
+	.page-banner-title {
+	    font-size: 32px;
 	}
 }
