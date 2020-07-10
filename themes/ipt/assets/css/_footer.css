@@ -327,8 +327,24 @@
 }
 
 @media(max-width: 575px){
-
-
+	.ftr-top-sec-btn a {
+	    max-width: 330px;
+	    height: 88px;
+	    font-size: 24px;
+	}
+	.ftr-top-sec-btn a{
+		margin-bottom: 15px;
+	}
+	.ftr-top-sec-btn-3{
+		padding-top: 10px;
+	}
+	.ftr-top-sec-btn-3 a{
+		background: #C90808;
+		max-width: 330px;
+	}
+	.hm-overons-sec-des-btn-1 a{
+		background: #c90808;
+	}
 }
 
 @media(max-width: 479px){

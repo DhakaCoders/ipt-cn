@@ -314,9 +314,7 @@
 	vertical-align: baseline;
 }
 .hm-client-logos-sec-cntlr ul li > div{
-	display: flex;
-	align-items: center;
-	justify-content: center;
+
 }
 
 
@@ -521,6 +519,9 @@
 	.hm-overons-sec-des-sub-title{
 		font-size: 17px;
 	}
+	.hm-our-references-sec-angle{
+		width: 40%;
+	}
 }
 
 @media(max-width: 1299px){
@@ -706,6 +707,63 @@
 		margin-left: -20px;
 		margin-right: -20px;
 	}
+	.hm-fea-box-item{
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.hm-fea-box-item p{
+		margin-bottom: 0;
+	}
+	.hm-fea-box-item-title{
+		margin-bottom: 10px;
+	}
+	.hm-fea-boxs-section{
+		padding-bottom: 45px;
+	}
+	.hmFeaBoxsSecSlider.slick-slider ul.slick-dots{
+		padding-top: 0!important;
+	}
+	.hm-fea-box-item{
+		padding-bottom: 25px;
+		padding-top: 0;
+	}
+	.hm-overons-sec-fea-img-cntlr{
+		display: none;
+	}
+	.hm-overons-sec-des{
+		text-align: center;
+	}
+	.hm-overons-sec-des-sub-title {
+	    font-size: 18px;
+	    margin-bottom: 10px;
+	}
+	.hm-overons-sec-des-title {
+	    font-size: 36px;
+	}
+	.hm-overons-sec-des-btn a,
+	.main-bnr-des-btn a{
+		width: 160px!important;
+		max-width: 100%!important;
+		font-size: 12px!important;
+	}
+	.hm-overons-sec-des-btn{
+		padding: 0 5px 10px;
+	}
+	.hm-overons-sec-des-btn-2 a{
+		color: #474747;
+		border-color: #474747;
+	}
+	.hm-overons-section {
+	    padding: 60px 0 50px;
+	}
+	.hm-overons-sec-des p {
+	    margin-bottom: 30px;
+	}
+	.hm-client-logos-sec-cntlr{
+		margin-bottom: 65px;
+	}
+	
 }
 
 @media(max-width: 479px){
@@ -727,6 +785,12 @@
 	.main-bnr-con-des{
 		padding-top: 100px;
 		padding-bottom: 120px;
+	}
+	.hm-overons-sec-des-title {
+	    font-size: 32px;
+	}
+	.hm-overons-sec-des-sub-title {
+	    font-size: 17px;
 	}
 }
 
