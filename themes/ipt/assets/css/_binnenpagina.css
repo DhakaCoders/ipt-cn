@@ -500,7 +500,7 @@ Gallery design
 		float: none;
 	}
 	.dfp-tbl-wrap{
-		margin-bottom: 40px;
+		margin-bottom: 0;
 	}
 	.dft-fea-box-item-inr{
 		padding-left: 20px;
@@ -509,7 +509,17 @@ Gallery design
 	.fl-dft-lftimg-rgtdes-rgt{
 		padding-bottom: 0;
 	}
-	
+	.dft-pro-items{
+		padding-top: 75px;
+		padding-bottom: 15px;
+	}
+	.dft-map{
+		margin-top: 45px;
+		margin-bottom: 65px;
+	}
+	.default-page-con{
+		padding-bottom: 70px;
+	}
 }
 
 
@@ -586,6 +596,13 @@ Gallery design
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+	.dft-pro-items{
+		margin-bottom: 30px;
+	}
+	.default-page-con{
+		padding-bottom: 40px;
+	}
+
 }
 
 
