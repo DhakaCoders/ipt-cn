@@ -139,6 +139,10 @@
 	    width: 100%;
 	    margin-bottom: 40px;
 	}
+	.producten-overview-items-btn >a{
+		border-color: #474747;
+		color: #474747;
+	}
 }
 @media(max-width: 575px){
 	.producten-overview-items-sec-innr > ul{
