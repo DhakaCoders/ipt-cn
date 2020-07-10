@@ -204,8 +204,8 @@ if( $('.iptPdSliders').length ){
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: true,
-  prevArrow: $('.rdls-lft-arrow'),
-  nextArrow: $('.rdls-rgt-arrow'),
+  prevArrow: $('.rdls-arrows .rdls-lft-arrow'),
+  nextArrow: $('.rdls-arrows .rdls-rgt-arrow'),
   dots: false,
   fade: true,
   asNavFor: '.referentiesDetailsThumbnailSlider'
@@ -218,11 +218,21 @@ $('.referentiesDetailsThumbnailSlider').slick({
   vertical: true,
   arrows: true,
   verticalSwiping: true,
-  prevArrow: $('rdls-lft-arrow'),
-  nextArrow: $('rdls-rgt-arrow'),
+  prevArrow: $('.rdls-thumbnail-arrows .rdls-lft-arrow'),
+  nextArrow: $('.rdls-thumbnail-arrows .rdls-rgt-arrow'),
   prevArrow: false,
   focusOnSelect: true,
   infinite: true,
+   responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            verticalSwiping: false,
+            vertical: false,
+            horizontal: true
+          }
+        }
+    ]
 });
 
 

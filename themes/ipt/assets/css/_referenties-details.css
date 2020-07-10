@@ -56,7 +56,7 @@
 }
 .rdls-arrows{
 	position: absolute;
-    bottom: 55px;
+    bottom: 19px;
     right: 25px;
     width: 85px;
 	height: 30px;
@@ -90,22 +90,18 @@
 }
 .rdls-thumbnail-arrows{
 	display: block;
-	height: 100%;
-	width: 30px;
-	position: absolute;
-	left: 50%;
-	top: 0;
-	margin-left: 21px;
-	transform: translateX(-50%);
-	z-index: 11;
+	position: initial;
 }
 .rdls-thumbnail-arrows .rdls-lft-arrow{
 	transform: rotate(90deg);
+	position: absolute;
+	left: 52%;
 }
 .rdls-thumbnail-arrows .rdls-rgt-arrow{
 	transform: rotate(90deg);
-	bottom: 32px;
+	bottom: 2px;
 	position: absolute;
+	left: 52%;
 }
 .referenties-details-right-slider{
 	
@@ -316,6 +312,19 @@
 	.referenties-details-slider-top-socials{
 		padding-bottom: 15px;
 	}
+	.referenties-details-sliders-cntlr{
+		display: initial;
+	}
+	.referenties-details-left-slider {
+	    max-width: 100%!important;
+	    margin-bottom: 35px;
+	}
+	.referenties-details-slider{
+		width: 100%!important;
+	}
+	.referenties-details-slider-items{
+		width: 100%!important;
+	}
 	.Beschrijving{
 		padding-bottom: 50px;
 	}
@@ -356,6 +365,13 @@
 	}
 }
 @media(max-width: 575px){
+	.Beschrijving-left{
+		padding: 40px 22px 0 22px;
+	}
+	.Beschrijving-left-title{
+		padding-left: 0;
+		margin-bottom: 30px;
+	}
 	.producten-overview-items-sec-innr > ul{
 		padding: 0;
 	}
