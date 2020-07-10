@@ -372,8 +372,24 @@ if (windowWidth <= 767) {
 }
 
 
+var container = $(".container").width();
+var tpreferencesgrdrgtcolWidth = $(".tp-references-grd-lft-col").outerWidth();
+var tpreferencesgrdrgtcolWidthCal1 = (container - tpreferencesgrdrgtcolWidth) - 25;
+var tpreferencesgrdrgtcolWidthCal2 = (container - tpreferencesgrdrgtcolWidth) - 70;
+$(".hmReferencesSlider .slick-prev").css({right : tpreferencesgrdrgtcolWidthCal1});
+$(".hmReferencesSlider .slick-next").css({right : tpreferencesgrdrgtcolWidthCal2});
 
-//alert();
+
+
+$('.tp-tabs-btn').on('click', function(){
+  $(this).toggleClass('tp-tabs-btn-expend');
+  $('.tp-tabs-xs ul').slideToggle(500);
+  
+});
+$('.tp-tabs-xs ul li').on('click', function(){
+  var selectText = $(this).text();
+  $('.tp-tabs-btn').html(selectText);
+});
 
 
 })(jQuery);
