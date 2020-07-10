@@ -333,16 +333,16 @@ form .dropdown-menu li a{
 /*slider break fix*/
 .hm-overons-sec-des-logos .hm-overons-des-logo,
 .hmReferencesSlider .hmReferencesSlideItem,
-.hmFeaBoxsSecSlider .hm-fea-box-item{
+.hmFeaBoxsSecSlider .hm-fea-box-item-col{
 	display: none;
 }
 .hm-overons-sec-des-logos .hm-overons-des-logo:first-child,
 .hmReferencesSlider .hmReferencesSlideItem:first-child,
-.hmFeaBoxsSecSlider .hm-fea-box-item:first-child{
+.hmFeaBoxsSecSlider .hm-fea-box-item-col:first-child{
 	display: block;
 }
 .hm-overons-sec-des-logos.slick-initialized .hm-overons-des-logo,
 .hmReferencesSlider.slick-initialized .hmReferencesSlideItem,
-.hmFeaBoxsSecSlider.slick-initialized .hm-fea-box-item{
+.hmFeaBoxsSecSlider.slick-initialized .hm-fea-box-item-col{
 	display: block;
 }
