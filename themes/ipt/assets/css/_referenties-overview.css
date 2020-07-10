@@ -136,12 +136,18 @@
 }
 /* responsive */
 @media(max-width: 1199px){
+	.referenties-overview-items-sec{
+		padding: 80px 0 50px 0;
+	}
 	.referenties-references-sec{
 		padding-top: 70px;
 	}
 	
 }
 @media(max-width: 991px){
+	.referenties-overview-items-sec{
+		padding: 65px 0 40px 0;
+	}
 	.referenties-references-sec-angle-cntlr{
 		position: initial;
 	}
@@ -158,6 +164,12 @@
 	}
 }
 @media(max-width: 767px){
+	.referenties-references-tab-btns{
+		margin-bottom: 30px;
+	}
+	.referenties-overview-items-sec{
+		padding: 55px 0 25px 0;
+	}
 	.referenties-references-sec{
 		padding-top: 65px;
 	}
