@@ -127,6 +127,10 @@
 	}
 }
 @media(max-width: 767px){
+	.producten-overview-items-sec{
+		padding-top: 50px!important;
+		padding-bottom: 35px!important;
+	}
 	.producten-overview-items-sec-innr > ul{
 		padding: 0;
 	}
@@ -145,6 +149,9 @@
 	}
 }
 @media(max-width: 575px){
+	.producten-overview-items-sec{
+		padding-bottom: 25px!important;
+	}
 	.producten-overview-items-sec-innr > ul{
 		padding: 0;
 	}
@@ -160,7 +167,7 @@
 	.producten-overview-items-sec-innr > ul >li{
 		padding-left: 10px;
 		padding-right: 10px;
-	    margin-bottom: 35px;
+	    margin-bottom: 30px;
 	}
 	.producten-overview-items{
 	    padding: 18px 16px 18px 16px;
