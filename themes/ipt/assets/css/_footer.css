@@ -345,10 +345,24 @@
 	.hm-overons-sec-des-btn-1 a{
 		background: #c90808;
 	}
+	.ftshdr-title {
+	    font-size: 30px;
+	}
 }
 
 @media(max-width: 479px){
-
+	.ftr-top-sec-btn{
+		display: block;
+	}
+	.ftr-top-sec-btn a{
+		max-width: 280px;
+		font-size: 19px;
+		height: 70px;
+	}
+	.ftr-top-sec-btn{
+		padding-left: 0;
+		padding-right: 0;
+	}
 
 }
 
