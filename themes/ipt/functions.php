@@ -2,7 +2,7 @@
 /**
 Constants->>
 */
-defined('THEME_NAME') or define('THEME_NAME', 'dmwatch');
+defined('THEME_NAME') or define('THEME_NAME', 'ipt');
 defined( 'THEME_DIR' ) or define( 'THEME_DIR', get_template_directory() );
 defined( 'THEME_URI' ) or define( 'THEME_URI', get_template_directory_uri() );
 
@@ -15,7 +15,7 @@ if( !function_exists('cbv_theme_setup') ){
 	
 	function cbv_theme_setup(){
 	    
-	  load_theme_textdomain( 'dmwatch', get_template_directory() . '/languages' );
+	  load_theme_textdomain( 'ipt', get_template_directory() . '/languages' );
 		add_theme_support( 'title-tag' );
         add_theme_support( 'woocommerce' );
 		add_theme_support('post-thumbnails');
@@ -23,13 +23,7 @@ if( !function_exists('cbv_theme_setup') ){
 			add_theme_support('category-thumbnails');
 		}
         add_image_size( 'bloggrid', 400, 280, true );
-        add_image_size( 'contgrid', 596, 510, true );
-        add_image_size( 'hmslide', 1584, 634, true );
-        add_image_size( 'projectgrid', 384, 380, true );
-        add_image_size( 'projectsingle', 664, 510, true );
-        add_image_size( 'projectthumb', 122, 92, true );
-        add_image_size( 'publicationgird', 308, 398, true );
-        add_image_size( 'reportgird', 377, 216, true );
+
 
 		
 		// add size to media uploader
@@ -45,9 +39,10 @@ if( !function_exists('cbv_theme_setup') ){
 		) );
 
 		register_nav_menus( array(
-          'cbv_main_menu' => __( 'Header Menu', THEME_NAME ),
-          'cbv_ft_menu' => __( 'Footer Menu', THEME_NAME ),
-          'cbv_event_menu' => __( 'Event Menu', THEME_NAME ),
+            'cbv_top_menu' => __( 'Top Menu', THEME_NAME ),
+            'cbv_main_menu' => __( 'Hoofdmenu', THEME_NAME ),
+            'cbv_fta_menu' => __( 'Footer Menu 1', THEME_NAME ),
+            'cbv_ftb_menu' => __( 'Footer Menu 2', THEME_NAME ),
 		) );
 
 	}
@@ -63,7 +58,6 @@ function cbv_theme_scripts(){
     include_once( THEME_DIR . '/enq-scripts/fonts.php' );
     include_once( THEME_DIR . '/enq-scripts/fancybox.php' );
     include_once( THEME_DIR . '/enq-scripts/slick.php' );
-    include_once( THEME_DIR . '/enq-scripts/waypoints.php' );
     include_once( THEME_DIR . '/enq-scripts/google.maps.php' );
     include_once( THEME_DIR . '/enq-scripts/animate.php' );
     include_once( THEME_DIR . '/enq-scripts/matchheight.php' );
