@@ -61,7 +61,7 @@
 }
 .ipt-pd-wel-des-title{
 	display: block;
-	font-size: 30px;
+	font-size: 40px;
 	line-height: 1;
 	margin-bottom: 22px;
 	font-weight: 700;
@@ -267,6 +267,9 @@
 	.pd-contact {
 	    padding-bottom: 100px;
 	}
+	.ipt-pd-wel-des-title {
+	    font-size: 37px;
+	}
 
 }
 
@@ -278,7 +281,7 @@
 	    padding-left: 60px;
 	}
 	.ipt-pd-slider-sec-wrap {
-	    padding: 60px 60px 70px;
+	    padding: 60px 50px 70px;
 	}
 	.ipt-pd-slider-entry-hdr p {
 	    margin-bottom: 40px;
@@ -296,11 +299,17 @@
 	    padding-bottom: 60px;
 	}
 	.ipt-cnt-entry-title {
-	    font-size: 37px;
+	    font-size: 28px;
 	}
 	.ipt-pd-slider-entry-tilte,
 	.ipt-pd-wel-des-title{
 	    font-size: 28px;
+	}
+	.ipt-pd-wel-des-title {
+	    font-size: 33px;
+	}
+	.ipt-pd-wel-des-subtitle{
+		font-size: 16px;
 	}
 
 	
@@ -317,10 +326,8 @@
 	    display: initial;
 	}
 	.ipt-pd-wel-img {
-	    height: 265px;
-	    max-width: 330px;
+	    height: 450px;
 	    width: 100%;
-	    margin: 0 auto;
 	    margin-bottom: 30px;
 	}
 	.ipt-pd-wel-des {
@@ -386,7 +393,10 @@
 	    padding: 50px 40px;
 	}
 	.ipt-cnt-entry-title {
-	    font-size: 32px;
+	    font-size: 25px;
+	}
+	.ipt-pd-wel-des-subtitle {
+	    font-size: 14px;
 	}
 }
 
@@ -407,8 +417,7 @@
 	    padding: 50px 15px;
 	}
 	.ipt-pd-ctlr .ipt-cnt-entry-title {
-	    font-size: 24px;
-	    line-height: 1.2;
+	    font-size: 22px;
 	}
 	.ipt-pd-slider-arrow .ipt-pd-slider-leftarrow {
 	    left: 2px;
@@ -416,10 +425,15 @@
 	.ipt-pd-slider-arrow .ipt-pd-slider-rightarrow {
 	    right: 2px;
 	}
+	.ipt-pd-wel-img {
+	    height: 400px;
+	}
 }
 
 @media(max-width: 479px){
-
+	.ipt-pd-wel-img {
+	    height: 265px;
+	}
 
 }
 
