@@ -348,6 +348,9 @@
 	.ftshdr-title {
 	    font-size: 30px;
 	}
+	.ftr-top-sec{
+		padding-top: 35px;
+	}
 }
 
 @media(max-width: 479px){
