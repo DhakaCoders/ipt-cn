@@ -1,45 +1,6 @@
 <?php 
 get_header();
-?>
-<section class="page-banner">
-  <div class="page-banner-controller" style="overflow: hidden;">
-    <div class="page-banner-bg inline-bg" style="background: url('<?php echo THEME_URI; ?>/assets/images/page-bnr.jpg');"></div>
-    <div class="page-banner-des">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="page-banner-des-inner">
-              <h1 class="page-banner-title">Binnenpagina</h1>
-              <div class="breadcrumbs">
-                <ul class="reset-list">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                  <li><a href="#">Binnenpagina</a></li>
-                </ul>
-              </div>
-              <div class="xs-breadcrumbs">
-                <ul class="reset-list clearfix">
-                  <li><a href="#">Home</a></li>
-                  <li>
-                    <a href="#">
-                    Terug
-                      <i>
-                        <svg class="xs-breadcrumbs-left-arrow-svg" width="12" height="12" viewBox="0 0 12 12" fill="#ffffff">
-                          <use xlink:href="#xs-breadcrumbs-left-arrow-svg"></use>
-                        </svg> 
-                      </i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<?php
+get_template_part( 'templates/page', 'banner' );
 while ( have_posts() ) :
   the_post();
 ?>

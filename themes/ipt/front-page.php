@@ -477,69 +477,8 @@ endif;
 </section>
 <?php endif; ?>
 <?php endif; ?>
-
-
-
-<section class="ftr-top-sec">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="ftr-top-inr">
-          <h2 class="ftshdr-title">Neque feugiat vehicula aliquet</h2>
-          <p>Vitae ridiculus dapibus morbi non, at orci leo volutpat integer. Aliquam ipsum sit magna est nulla nulla. <br>Dictum feugiat consectetur in mauris, scelerisque mattis netus gravida.</p>
-          <div class="ftr-top-sec-btns">
-            <div class="ftr-top-sec-btn ftr-top-sec-btn-tel">
-              <a href="#">
-                <i>
-                  <svg class="tel-blue-icon-svg" width="28" height="28" viewBox="0 0 28 28" fill="#000062">
-                    <use xlink:href="#tel-blue-icon-svg"></use>
-                  </svg> 
-                </i>
-                <span>+32(0)53 80 49 12</span>
-              </a>
-            </div>
-            <div class="ftr-top-sec-btn ftr-top-sec-btn-mail">
-              <a href="#">
-                <i>
-                  <svg class="mail-blue-icon-svg" width="28" height="28" viewBox="0 0 28 28" fill="#000062">
-                    <use xlink:href="#mail-blue-icon-svg"></use>
-                  </svg> 
-                </i>
-                <span>info@itp.eu</span>
-              </a>
-            </div>
-            <div class="ftr-top-sec-btn-3">
-              <a href="#">Contacteer Ons</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="google-map-sec">
-  <div class="google-map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1053132.5390187346!2d3.919207982966997!3d50.8727335933461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c17d64edf39797%3A0x47ebf2b439e60ff2!2sBelgium!5e0!3m2!1sen!2sbd!4v1593595059125!5m2!1sen!2sbd" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-  </div>
-  <div class="contact-google-map-des">
-    <div class="contact-google-map-des-ctlr">
-      <div class="contact-google-map-des-inr">
-        <h5 class="cnt-gm-title">Industrial Textile Products</h5>
-        <div class="cnt-gm-location">
-          <strong class="cnt-gm-lctn-title">Locatie</strong>
-          <a href="#">Evenbroekveld 44 <br>B-9420 Erpe-Mere <br>België</a>
-        </div>
-        <div class="cnt-gm-opening-hours">
-          <strong class="cnt-gm-oh-title">openingstijden</strong>
-          <ul class="reset-list">
-            <li><strong>M - V : 08u00 - 17u00</strong></li>
-            <li><strong>Z : 08u00 - 11u00</strong></li>
-            <li><strong>Z : gesloten</strong></li>
-          </ul>  
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<?php 
+get_template_part('templates/promo', 'section'); 
+get_template_part('templates/gmap', 'section'); 
+?>
 <?php get_footer(); ?>

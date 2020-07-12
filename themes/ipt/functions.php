@@ -152,12 +152,12 @@ function custom_body_classes($classes){
 // call the filter for the body class
 add_filter('body_class', 'custom_body_classes');
 
-function get_all_gallery_posts( $query ) {
-        if( !is_admin() && $query->is_main_query() && is_post_type_archive( 'press' ) ) {
+function get_all_referenties_posts( $query ) {
+        if( !is_admin() && $query->is_main_query() && is_post_type_archive( 'referentie' ) ) {
             $query->set( 'posts_per_page', '3' );
         }
     }
-add_action( 'pre_get_posts', 'get_all_gallery_posts' );
+add_action( 'pre_get_posts', 'get_all_referenties_posts' );
 
 function wds_cpt_search( $query ) {
  
