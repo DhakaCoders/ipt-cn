@@ -229,7 +229,7 @@ $('.referentiesDetailsThumbnailSlider').slick({
           settings: {
             verticalSwiping: false,
             vertical: false,
-            horizontal: true
+            
           }
         }
     ]
