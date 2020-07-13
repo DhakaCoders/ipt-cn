@@ -112,6 +112,7 @@ while ( have_posts() ) :
             endif;
             }elseif( get_row_layout() == 'gmap' ){
               $fc_gmap = get_sub_field('fc_gmap');
+              $ghours = $fc_gmap['openingstijden'];
               $address = get_field('address', 'options');
               $gmapsurl = get_field('google_maps', 'options');
               $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
@@ -123,20 +124,25 @@ while ( have_posts() ) :
               echo '<div class="contact-google-map-des">';
               echo '<div class="contact-google-map-des-ctlr">';
               echo '<div class="contact-google-map-des-inr">';
-              echo '<h5 class="cnt-gm-title">Industrial Textile Products</h5>';
+              echo '<h5 class="cnt-gm-title">';
+              _e('Industrial Textile Products', THEME_NAME);
+              echo '</h5>';
               echo '<div class="cnt-gm-location">';
-              echo '<strong class="cnt-gm-lctn-title">Locatie</strong>';
+              echo '<strong class="cnt-gm-lctn-title">';
+              _e('Locatie', THEME_NAME);
+              echo '</strong>';
               if( !empty($address) ) printf('<a href="%s">%s</a>', $gmaplink, $address);
               echo '</div>';
               echo '<div class="cnt-gm-opening-hours">';
-              echo '<strong class="cnt-gm-oh-title">openingstijden</strong>';
+              echo '<strong class="cnt-gm-oh-title">';
+              _e('openingstijden', THEME_NAME);
+              echo '</strong>';
               if($ghours):
               echo '<ul class="reset-list">';
-                    foreach( $ghours as $hour ):
-                    <li><strong>M - V : 08u00 - 17u00</strong></li>
-                    <li><strong>Z : 08u00 - 11u00</strong></li>
-                    <li><strong>Z : gesloten</strong></li>
-                  </ul> '; 
+                foreach( $ghours as $hour ):
+                if(!empty($hour['hours'])) printf('<li><strong>%s</strong></li>', $hour['hours']);
+                endforeach;
+              echo '</ul> '; 
               endif;    
               echo '</div>';
               echo '</div>';
