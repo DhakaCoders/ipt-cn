@@ -200,43 +200,64 @@ if( $('.iptPdSliders').length ){
 
 
 /* End of Shoriful*/
- $('.referentiesDetailsSlider').slick({
+
+
+
+$('.referentiesDetailsSlider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: true,
   prevArrow: $('.rdls-arrows .rdls-lft-arrow'),
   nextArrow: $('.rdls-arrows .rdls-rgt-arrow'),
-  dots: false,
   fade: true,
   asNavFor: '.referentiesDetailsThumbnailSlider'
 });
+
 $('.referentiesDetailsThumbnailSlider').slick({
   slidesToShow: 2,
   slidesToScroll: 1,
   asNavFor: '.referentiesDetailsSlider',
   dots: false,
-  vertical: true,
+  infinite: false,
+  focusOnSelect: true,
   arrows: true,
-  verticalSwiping: true,
   prevArrow: $('.rdls-thumbnail-arrows .rdls-lft-arrow'),
   nextArrow: $('.rdls-thumbnail-arrows .rdls-rgt-arrow'),
-  prevArrow: false,
-  focusOnSelect: true,
-  infinite: true,
-   responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            verticalSwiping: false,
-            vertical: false,
-            
-          }
-        }
-    ]
+  adaptiveHeight: true,
+  vertical: true,
+  verticalSwiping: true
 });
 
 
+$('.xsReferentiesDetailsBigSlider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  dots: false,
+  asNavFor: '.xsReferentiesDetailsThumbSlider'
+});
 
+$('.xsReferentiesDetailsThumbSlider').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.xsReferentiesDetailsBigSlider',
+  dots: false,
+  arrows: false,
+  infinite: false,
+  focusOnSelect: true,
+  responsive: [
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+});
 
 /* End of Noyon */
 
