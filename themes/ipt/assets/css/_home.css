@@ -826,6 +826,10 @@
 	.tp-tabs-xs ul li{
 		padding-bottom: 10px;
 	}
+	.tp-tabs-xs ul li a{
+		display: block;
+		color: #474747;
+	}
 	.tp-references-grd-lft-fea-img{
 		height: 400px;
 	}
