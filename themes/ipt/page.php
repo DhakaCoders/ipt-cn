@@ -58,14 +58,18 @@ while ( have_posts() ) :
                 endforeach;
               echo "</div></div>";
               endif;      
-            }elseif( get_row_layout() == 'usps' ){
-              $fc_usps = get_sub_field('fc_usps');
+            }elseif( get_row_layout() == 'troefs' ){
+              $fc_usps = get_sub_field('fc_troefs');
               echo "<div class='dft-fea-boxs clearfix'>";
                 foreach( $fc_usps as $usp ):
                   echo "<div class='dft-fea-box-item'>";
                     echo "<div class='dft-fea-box-item-inr'>";
+                    if( $usp['knop'] ):
+                      echo '<a href="'.$usp['knop'].'" class="overlay-link"></a>';
+                    endif;
 	                    echo '<div class="dft-fea-box-item-icon mHc1">';
-	                    echo wp_get_attachment_image( $usp['icon'] );
+	                    echo '<i><svg class="hm-fea-box-item-icon-svg" width="38" height="38" viewBox="0 0 38 38" fill="#fff">
+                      <use xlink:href="#hm-fea-box-item-icon-svg"></use></svg></i>';
 	                    echo "</div>";
 	                    printf('<h4 class="dft-fea-box-item-title mHc2">%s</h4>', $usp['titel']);
 	                    if( !empty( $usp['beschrijving'] ) ) echo wpautop($usp['beschrijving']);
@@ -73,22 +77,74 @@ while ( have_posts() ) :
                   echo "</div>";
                 endforeach;
               echo "</div>";
+            }elseif( get_row_layout() == 'producten' ){
+              $fc_prodcts = get_sub_field('fc_producten');
+                echo '<div class="dft-pro-items">
+                    <div class="dft-pro-item">
+                      <div class="hm-pro-bxe-item">
+                        <div class="hm-pro-bxe-item-icon mHc1">
+                          <i>
+                            <svg class="hm-pro-bxe-item-icon-01-svg" width="84" height="84" viewBox="0 0 84 84" fill="#000062">
+                              <use xlink:href="#hm-pro-bxe-item-icon-01-svg"></use>
+                            </svg> 
+                          </i>';
+                echo '</div>';
+                if( !empty( $fc_prodcts['titel'] ) ) printf( '<h3 class="hm-pro-bxe-item-title mHc2">%s</h3>', $fc_prodcts['titel']); 
+                if( !empty( $fc_prodcts['beschrijving'] ) ) echo wpautop($fc_prodcts['beschrijving']); 
+                if( !empty($fc_prodcts['knop']) ):
+                echo '<div class="hm-pro-bxe-item-more-link">'; 
+                  printf('<a href="%s">Ontdek onze oplossingen</a>', $fc_prodcts['knop']);
+                echo '</div>';
+                endif;
+                echo '</div></div></div>';
             }elseif( get_row_layout() == 'logo' ){
               $fc_logos = get_sub_field('fc_logo');
+              if( $fc_logos ):
               echo '<div class="dft-overons-logos-cntlr">';
-	            echo '<div class="hm-overons-sec-des-logos clearfix">';
-	              <div class="hm-overons-des-logo">
-	                <div class="hm-overons-des-logo-inr mHc">
-	                  <img src="assets/images/hm-overons-sec-des-logo-01.png">
-	                </div>
-	              </div>
-	              <div class="hm-overons-des-logo">
-	                <div class="hm-overons-des-logo-inr mHc">
-	                  <img src="assets/images/hm-overons-sec-des-logo-02.png">
-	                </div>
-	              </div>
+  	            echo '<div class="hm-overons-sec-des-logos clearfix">';
+                foreach( $fc_logos as $fc_logo ):
+  	            echo '<div class="hm-overons-des-logo"><div class="hm-overons-des-logo-inr mHc">';
+    	          if( !empty($fc_logo['logo']) ) echo cbv_get_image_tag($fc_logo['logo']);
+    	          echo '</div></div>';
+                endforeach;
+  	            echo '</div>';
 	            echo '</div>';
-	          echo '</div>';
+            endif;
+            }elseif( get_row_layout() == 'gmap' ){
+              $fc_gmap = get_sub_field('fc_gmap');
+              $address = get_field('address', 'options');
+              $gmapsurl = get_field('google_maps', 'options');
+              $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
+              if($fc_gmap):
+              echo '<div class="dft-map">';
+              echo '<div class="google-map">';
+              if( !empty($fc_gmap['map']) ) printf('%s', $fc_gmap['map']);
+              echo '</div>';
+              echo '<div class="contact-google-map-des">';
+              echo '<div class="contact-google-map-des-ctlr">';
+              echo '<div class="contact-google-map-des-inr">';
+              echo '<h5 class="cnt-gm-title">Industrial Textile Products</h5>';
+              echo '<div class="cnt-gm-location">';
+              echo '<strong class="cnt-gm-lctn-title">Locatie</strong>';
+              if( !empty($address) ) printf('<a href="%s">%s</a>', $gmaplink, $address);
+              echo '</div>';
+              echo '<div class="cnt-gm-opening-hours">';
+              echo '<strong class="cnt-gm-oh-title">openingstijden</strong>';
+              if($ghours):
+              echo '<ul class="reset-list">';
+                    foreach( $ghours as $hour ):
+                    <li><strong>M - V : 08u00 - 17u00</strong></li>
+                    <li><strong>Z : 08u00 - 11u00</strong></li>
+                    <li><strong>Z : gesloten</strong></li>
+                  </ul> '; 
+              endif;    
+              echo '</div>';
+              echo '</div>';
+              echo '</div>';
+              echo '</div>';
+              echo '</div>';
+              echo '<hr>';
+              endif;
             }elseif( get_row_layout() == 'table' ){
               $fc_table = get_sub_field('fc_table');
               cbv_table($fc_table);

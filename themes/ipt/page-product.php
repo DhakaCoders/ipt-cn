@@ -4,23 +4,26 @@
   */
   get_header(); 
   $thisID = get_the_ID();
-  $intro = get_field('introsec', $thisID); 
+  $intro = get_field('intro', $thisID); 
 
   get_template_part( 'templates/page', 'banner' );
 ?>
-
+<?php if( $intro ): ?>
 <section class="Neque-feugiat-sec">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div class="ftr-top-inr Neque-feugiat-innr">
-          <h2 class="ftshdr-title">Neque feugiat vehicula aliquet</h2>
-          <p>Vitae ridiculus dapibus morbi non, at orci leo volutpat integer. Aliquam ipsum sit magna est nulla nulla. <br>Dictum feugiat consectetur in mauris, scelerisque mattis netus gravida.</p>
+          <?php 
+            if( !empty( $intro['titel'] ) ) printf( '<h2 class="ftshdr-title">%s</h2>', $intro['titel']); 
+            if( !empty( $intro['beschrijving'] ) ) echo wpautop($intro['beschrijving']); 
+          ?>
         </div>
       </div>
     </div>
   </div>
 </section>
+<?php endif; ?>
 <?php 
   $terms = get_terms( array(
     'taxonomy' => 'product_cat',
