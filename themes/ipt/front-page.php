@@ -220,6 +220,10 @@ endif;
   if( $showhide_referenties ):
     $hrefer = get_field('hreferenties', HOMEID);
     if($hrefer):
+      $sCats = $hrefer['selecteer_categorieen'];
+      $activeCat = $hrefer['actievecategorie'];
+      $selecteerproducten = $hrefer['selecteerproducten'];
+      var_dump($selecteerproducten);
 ?>
 <section class="hm-our-references-sec">
   <div class="hm-our-references-sec-angle">
@@ -236,80 +240,41 @@ endif;
             ?>
           </div>
         </div>
+        <?php if( $sCats ): ?>
         <div class="col-sm-12">
           <div class="references-tab-btns">
             <div class="tp-tabs clearfix hide-sm">
               <ul class="reset-list">
+                <?php foreach( $sCats as $sCat ): ?>
                 <li>
-                  <button class="tab-link tab-btn current" data-tab="tab-1">
+                  <a href="<?php echo get_term_link( $sCat ); ?>" class="tab-link tab-btn<?php echo ($activeCat == $sCat->term_id)? ' current': ''; ?>">
                     <i>
                       <svg class="tab-link-icon-01-svg" width="24" height="24" viewBox="0 0 24 24" fill="#474747">
                         <use xlink:href="#tab-link-icon-01-svg"></use>
                       </svg> 
                     </i>
-                    <span>Bouwsector</span>
-                  </button>
+                    <span><?php echo $sCat->name; ?></span>
+                  </a> 
                 </li>
-                <li>
-                  <button class="tab-link tab-btn" data-tab="tab-2">
-                    <i>
-                      <svg class="tab-link-icon-02-svg" width="24" height="24" viewBox="0 0 24 24" fill="#474747">
-                        <use xlink:href="#tab-link-icon-02-svg"></use>
-                      </svg> 
-                    </i>
-                    <span>Groothandel</span>
-                  </button>
-                </li>
-                <li>
-                  <button class="tab-link tab-btn" data-tab="tab-3">
-                    <i>
-                      <svg class="tab-link-icon-03-svg" width="24" height="24" viewBox="0 0 24 24" fill="#474747">
-                        <use xlink:href="#tab-link-icon-03-svg"></use>
-                      </svg> 
-                    </i>
-                    <span>Automobiel</span>
-                  </button>
-                </li>
-                <li>
-                  <button class="tab-link tab-btn" data-tab="tab-4">
-                    <i>
-                      <svg class="tab-link-icon-04-svg" width="24" height="24" viewBox="0 0 24 24" fill="#474747">
-                        <use xlink:href="#tab-link-icon-04-svg"></use>
-                      </svg> 
-                    </i>
-                    <span>Fabriek</span>
-                  </button>
-                </li>
-                <li>
-                  <button class="tab-link tab-btn" data-tab="tab-5">
-                    <i>
-                      <svg class="tab-link-icon-05-svg" width="24" height="24" viewBox="0 0 24 24" fill="#474747">
-                        <use xlink:href="#tab-link-icon-05-svg"></use>
-                      </svg> 
-                    </i>
-                    <span>Kledij</span>
-                  </button>
-                </li>
+                <?php endforeach; ?>
               </ul>
             </div>
             <div class="tp-tabs-xs show-sm">
               <strong class="tp-tabs-btn">Groothandel</strong>
               <ul class="reset-list">
-                <li>Bouwsector</li>
-                <li>Groothandel</li>
-                <li>Automobiel</li>
-                <li>Fabriek</li>
-                <li>Kledij</li>
+                <?php foreach( $sCats as $sCat ): ?>
+                  <li><a href="<?php echo get_term_link( $sCat ); ?>"><?php echo $sCat->name; ?></a></li>
+                <?php endforeach; ?>
               </ul>
             </div>
           </div>
           <div class="references-tab-contens">
-            <div id="tab-1" class="fl-tab-content current">
+            <div class="current">
               <div class="hm-references-slider hmReferencesSlider">
                 <div class="hmReferencesSlideItem">
                   <div class="tp-references-grd-row clearfix">
                     <div class="tp-references-grd-lft-col">
-                      <div class="tp-references-grd-lft-fea-img inline-bg" style="background: url(<?php echo THEME_URI; ?>/assets/images/references-item-fea-img-01.png);">
+                      <div class="tp-references-grd-lft-fea-img inline-bg" style="background: url(assets/images/references-item-fea-img-01.png);">
                         
                       </div>
                     </div>
@@ -337,7 +302,7 @@ endif;
                 <div class="hmReferencesSlideItem">
                   <div class="tp-references-grd-row clearfix">
                     <div class="tp-references-grd-lft-col">
-                      <div class="tp-references-grd-lft-fea-img inline-bg" style="background: url(<?php echo THEME_URI; ?>/assets/images/references-item-fea-img-01.png);">
+                      <div class="tp-references-grd-lft-fea-img inline-bg" style="background: url(assets/images/references-item-fea-img-01.png);">
                         
                       </div>
                     </div>
@@ -364,99 +329,6 @@ endif;
                 </div>
               </div>
             </div>
-            <div id="tab-2" class="fl-tab-content">
-              <div class="hm-references-slider hmReferencesSlider">
-                <div class="hmReferencesSlideItem">
-                  <div class="tp-references-grd-row clearfix">
-                    <div class="tp-references-grd-lft-col">
-                      <div class="tp-references-grd-lft-fea-img inline-bg" style="background: url(<?php echo THEME_URI; ?>/assets/images/references-item-fea-img-01.png);">
-                        
-                      </div>
-                    </div>
-                    <div class="tp-references-grd-rgt-col">
-                      <div class="tp-references-grd-rgt-col-inr">
-                        <h4 class="tp-references-grd-des-title">Project titel</h4>
-                        <p>Vitae ridiculus dapibus morbi non, at orci leo volutpat integer. Aliquam ipsum sit magna est nulla nulla. Dictum feugiat consectetur in mauris, scelerisque mattis netus gravida.</p>
-                        <ul>
-                          <li>Dictum feugiat consectetur in mauris, scelerisque mattis.</li>
-                          <li>Vitae ornare nullam purus, nec. Velit mi pretium lorem.</li>
-                          <li>Amet, purus etiam nulla urna sed. Risus id lectus.</li>
-                        </ul>
-                        <div class="hm-overons-sec-des-btns">
-                          <div class="hm-overons-sec-des-btn hm-overons-sec-des-btn-1">
-                            <a href="#">Lees meer</a>
-                          </div>
-                          <div class="hm-overons-sec-des-btn hm-overons-sec-des-btn-2">
-                            <a href="#">Contacteer ons</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="hmReferencesSlideItem">
-                  <div class="tp-references-grd-row clearfix">
-                    <div class="tp-references-grd-lft-col">
-                      <div class="tp-references-grd-lft-fea-img inline-bg" style="background: url(<?php echo THEME_URI; ?>/assets/images/references-item-fea-img-01.png);">
-                        
-                      </div>
-                    </div>
-                    <div class="tp-references-grd-rgt-col">
-                      <div class="tp-references-grd-rgt-col-inr">
-                        <h4 class="tp-references-grd-des-title">Project titel 2</h4>
-                        <p>Vitae ridiculus dapibus morbi non, at orci leo volutpat integer. Aliquam ipsum sit magna est nulla nulla. Dictum feugiat consectetur in mauris, scelerisque mattis netus gravida.</p>
-                        <ul>
-                          <li>Dictum feugiat consectetur in mauris, scelerisque mattis.</li>
-                          <li>Vitae ornare nullam purus, nec. Velit mi pretium lorem.</li>
-                          <li>Amet, purus etiam nulla urna sed. Risus id lectus.</li>
-                        </ul>
-                        <div class="hm-overons-sec-des-btns">
-                          <div class="hm-overons-sec-des-btn hm-overons-sec-des-btn-1">
-                            <a href="#">Lees meer</a>
-                          </div>
-                          <div class="hm-overons-sec-des-btn hm-overons-sec-des-btn-2">
-                            <a href="#">Contacteer ons</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="tab-3" class="fl-tab-content">
-              <div class="hm-references-slider hmReferencesSlider">
-                <div class="hmReferencesSlideItem">
-                  <div class="tp-references-grd-row clearfix">
-                    <div class="tp-references-grd-lft-col">
-                      <div class="tp-references-grd-lft-fea-img inline-bg" style="background: url(<?php echo THEME_URI; ?>/assets/images/references-item-fea-img-01.png);">
-                        
-                      </div>
-                    </div>
-                    <div class="tp-references-grd-rgt-col">
-                      <div class="tp-references-grd-rgt-col-inr">
-                        <h4 class="tp-references-grd-des-title">Project titel</h4>
-                        <p>Vitae ridiculus dapibus morbi non, at orci leo volutpat integer. Aliquam ipsum sit magna est nulla nulla. Dictum feugiat consectetur in mauris, scelerisque mattis netus gravida.</p>
-                        <ul>
-                          <li>Dictum feugiat consectetur in mauris, scelerisque mattis.</li>
-                          <li>Vitae ornare nullam purus, nec. Velit mi pretium lorem.</li>
-                          <li>Amet, purus etiam nulla urna sed. Risus id lectus.</li>
-                        </ul>
-                        <div class="hm-overons-sec-des-btns">
-                          <div class="hm-overons-sec-des-btn hm-overons-sec-des-btn-1">
-                            <a href="#">Lees meer</a>
-                          </div>
-                          <div class="hm-overons-sec-des-btn hm-overons-sec-des-btn-2">
-                            <a href="#">Contacteer ons</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <div class="view-all-references-btn">
               <a href="#">
                 <span>Bekijk al onze referenties </span>
@@ -470,7 +342,7 @@ endif;
           </div>
 
         </div>
-
+        <?php endif; ?>
 
 
       </div>

@@ -18,58 +18,37 @@ get_template_part( 'templates/page', 'banner' );
         <div class="col-sm-12">
           <div class="references-tab-btns referenties-references-tab-btns">
             <div class="tp-tabs clearfix">
+              <?php 
+              $hrefer = get_field('hreferenties', HOMEID);
+              if($hrefer):
+                $sCats = $hrefer['selecteer_categorieen'];
+                if($sCats){
+                  $terms = $sCats;
+                }else{
+                  $terms = get_terms( array(
+                  'taxonomy' => 'referenties_cat',
+                  'hide_empty' => false,
+                  'parent' => 0
+                ) );
+                }
+                
+              ?>
               <ul class="reset-list">
+
+                <?php foreach( $sCats as $sCat ): ?>
                 <li>
-                  <a href="#" class="tab-btn current">
+                  <a href="<?php echo get_term_link( $sCat ); ?>" class="tab-btn<?php echo ($cterm->term_id == $sCat->term_id)? ' current': ''; ?>">
                     <i>
                       <svg class="tab-link-icon-01-svg" width="24" height="24" viewBox="0 0 24 24" fill="#474747">
                         <use xlink:href="#tab-link-icon-01-svg"></use>
                       </svg> 
                     </i>
-                    <span>Bouwsector</span>
-                  </a>
+                    <span><?php echo $sCat->name; ?></span>
+                  </a> 
                 </li>
-                <li>
-                  <a href="#" class="tab-btn">
-                    <i>
-                      <svg class="tab-link-icon-02-svg" width="24" height="24" viewBox="0 0 24 24" fill="#474747">
-                        <use xlink:href="#tab-link-icon-02-svg"></use>
-                      </svg> 
-                    </i>
-                    <span>Groothandel</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="tab-btn">
-                    <i>
-                      <svg class="tab-link-icon-03-svg" width="24" height="24" viewBox="0 0 24 24" fill="#474747">
-                        <use xlink:href="#tab-link-icon-03-svg"></use>
-                      </svg> 
-                    </i>
-                    <span>Automobiel</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="tab-btn">
-                    <i>
-                      <svg class="tab-link-icon-04-svg" width="24" height="24" viewBox="0 0 24 24" fill="#474747">
-                        <use xlink:href="#tab-link-icon-04-svg"></use>
-                      </svg> 
-                    </i>
-                    <span>Fabriek</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="tab-btn">
-                    <i>
-                      <svg class="tab-link-icon-05-svg" width="24" height="24" viewBox="0 0 24 24" fill="#474747">
-                        <use xlink:href="#tab-link-icon-05-svg"></use>
-                      </svg> 
-                    </i>
-                    <span>Kledij</span>
-                  </a>
-                </li>
+                <?php endforeach; ?>
               </ul>
+            <?php endif; ?>
             </div>
           </div>
         </div>
