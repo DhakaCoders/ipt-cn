@@ -1,10 +1,13 @@
 <?php 
 get_header(); 
+$cterm = get_queried_object();
 $topID = array();
 $pageID = 240;
 $intro = get_field('intro', $pageID);
 get_template_part( 'templates/page', 'banner' );
 ?>
+
+
 <section class="hm-our-references-sec referenties-references-sec">
   <div class="hm-our-references-sec-cntlr">
     <div class="container">
@@ -26,7 +29,6 @@ get_template_part( 'templates/page', 'banner' );
               $hrefer = get_field('hreferenties', HOMEID);
               if($hrefer):
                 $sCats = $hrefer['selecteer_categorieen'];
-                $activeCat = $hrefer['actievecategorie'];
                 if($sCats){
                   $terms = $sCats;
                 }else{
@@ -42,7 +44,7 @@ get_template_part( 'templates/page', 'banner' );
 
                 <?php foreach( $terms as $term ): ?>
                 <li>
-                  <a href="<?php echo get_term_link( $term ); ?>" class="tab-btn<?php echo ($activeCat == $term->term_id)? ' current': ''; ?>">
+                  <a href="<?php echo get_term_link( $term ); ?>" class="tab-btn<?php echo ($cterm->term_id == $term->term_id)? ' current': ''; ?>">
                     <?php 
                     $afbeelding_id = get_field('icon', $term, false); 
                     if( !empty($afbeelding_id) ):
@@ -61,7 +63,6 @@ get_template_part( 'templates/page', 'banner' );
       </div>
     </div>
   </div>
-
   <?php
     $query = new WP_Query(array( 
       'post_type'=> 'referentie',
@@ -80,7 +81,7 @@ get_template_part( 'templates/page', 'banner' );
         array(
            'taxonomy' => 'referenties_cat',
             'field'    => 'term_id',
-            'terms'    => $activeCat
+            'terms'    => $cterm->term_id
             ),
       ),
       ) 
@@ -131,7 +132,6 @@ while($query->have_posts()): $query->the_post();
   </div>
   <?php endwhile; ?>
  <?php } wp_reset_postdata();  ?>
-
 </section>
 
 
@@ -150,7 +150,7 @@ $query = new WP_Query(array(
       array(
          'taxonomy' => 'referenties_cat',
           'field'    => 'term_id',
-          'terms'    => $activeCat
+          'terms'    => $cterm->term_id
           ),
     ),
   ) 
@@ -170,7 +170,7 @@ if($query->have_posts()):
             if( !empty($overview['afbeelding']) )
               $ref_tag = cbv_get_image_src($overview['afbeelding']);
             else
-              $ref_tag = THEME_URI.'/assets/images/producten-overview-items-img-0010.jpg';
+              $ref_tag = ''; 
           ?>
             <li>
               <div class="producten-overview-items referenties-overview-items mHc">
@@ -229,7 +229,7 @@ if($query->have_posts()):
 </section>
 <?php 
   else:
-    echo '<div class="hasgap">Geen resultaat</div>';
+    echo '<div class="hasgap"></div>';
   endif;  
   wp_reset_postdata();
 ?>

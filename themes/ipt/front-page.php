@@ -9,7 +9,7 @@ get_header();
 
     $bafbeelding = '';
     if( !empty($intro['afbeelding']) ){
-      $bafbeelding = cbv_get_image_src($intro['afbeelding']);
+      $bafbeelding = cbv_get_image_src($intro['afbeelding'], 'hmbanner');
     }
   ?>
   <div class="main-bnr-con-cntlr">
@@ -137,7 +137,7 @@ endif;
     if($hoverons):
     $ovafbeelding = '';
     if( !empty($hoverons['afbeelding']) ){
-      $ovafbeelding = cbv_get_image_src($hoverons['afbeelding']);
+      $ovafbeelding = cbv_get_image_src($hoverons['afbeelding'], 'overgrid');
     }
     $oblogos = $hoverons['logos'];
 ?>
@@ -222,8 +222,7 @@ endif;
     if($hrefer):
       $sCats = $hrefer['selecteer_categorieen'];
       $activeCat = $hrefer['actievecategorie'];
-      $selecteerproducten = $hrefer['selecteerproducten'];
-      var_dump($selecteerproducten);
+      $referIDs = $hrefer['selecteereferenties'];
 ?>
 <section class="hm-our-references-sec">
   <div class="hm-our-references-sec-angle">
@@ -245,14 +244,21 @@ endif;
           <div class="references-tab-btns">
             <div class="tp-tabs clearfix hide-sm">
               <ul class="reset-list">
-                <?php foreach( $sCats as $sCat ): ?>
+                <?php 
+                $activeTerm = '';
+                foreach( $sCats as $sCat ): 
+                  if( $activeCat == $sCat->term_id ){
+                    $activeTerm = $sCat->name;
+                  }
+                ?>
                 <li>
                   <a href="<?php echo get_term_link( $sCat ); ?>" class="tab-link tab-btn<?php echo ($activeCat == $sCat->term_id)? ' current': ''; ?>">
-                    <i>
-                      <svg class="tab-link-icon-01-svg" width="24" height="24" viewBox="0 0 24 24" fill="#474747">
-                        <use xlink:href="#tab-link-icon-01-svg"></use>
-                      </svg> 
-                    </i>
+                    <?php 
+                    $afbeelding_id = get_field('icon', $sCat, false); 
+                    if( !empty($afbeelding_id) ):
+                      echo cbv_get_image_tag( $afbeelding_id );
+                    endif;
+                    ?>
                     <span><?php echo $sCat->name; ?></span>
                   </a> 
                 </li>
@@ -260,7 +266,9 @@ endif;
               </ul>
             </div>
             <div class="tp-tabs-xs show-sm">
-              <strong class="tp-tabs-btn">Groothandel</strong>
+              <?php if( !empty($activeTerm) ): ?>
+              <strong class="tp-tabs-btn"><?php echo $activeTerm; ?></strong>
+              <?php endif; ?>
               <ul class="reset-list">
                 <?php foreach( $sCats as $sCat ): ?>
                   <li><a href="<?php echo get_term_link( $sCat ); ?>"><?php echo $sCat->name; ?></a></li>
@@ -270,75 +278,73 @@ endif;
           </div>
           <div class="references-tab-contens">
             <div class="current">
+            <?php
+              if($referIDs):
+              $query = new WP_Query(array( 
+                'post_type'=> 'referentie',
+                'post_status' => 'publish',
+                'posts_per_page' => count($referIDs),
+                'post__in' => $referIDs,
+                'orderby' => 'date',
+                'order'=> 'ASC',
+                'tax_query' => array(
+                  array(
+                     'taxonomy' => 'referenties_cat',
+                      'field'    => 'term_id',
+                      'terms'    => $activeCat
+                      ),
+                ),
+                ) 
+              );
+              if($query->have_posts()){
+            ?>
               <div class="hm-references-slider hmReferencesSlider">
+              <?php 
+              while($query->have_posts()): $query->the_post(); 
+                $overview = get_field('overview', get_the_ID());
+                if( !empty($overview['afbeelding']) )
+                  $ref_src = cbv_get_image_src($overview['afbeelding'], 'hrefergrid');
+                else
+                  $ref_src = THEME_URI.'/assets/images/producten-overview-items-img-0010.jpg';
+              ?>
                 <div class="hmReferencesSlideItem">
                   <div class="tp-references-grd-row clearfix">
                     <div class="tp-references-grd-lft-col">
-                      <div class="tp-references-grd-lft-fea-img inline-bg" style="background: url(assets/images/references-item-fea-img-01.png);">
+                      <div class="tp-references-grd-lft-fea-img inline-bg" style="background: url(<?php echo $ref_src; ?>);">
                         
                       </div>
                     </div>
                     <div class="tp-references-grd-rgt-col">
                       <div class="tp-references-grd-rgt-col-inr">
-                        <h4 class="tp-references-grd-des-title">Project titel</h4>
-                        <p>Vitae ridiculus dapibus morbi non, at orci leo volutpat integer. Aliquam ipsum sit magna est nulla nulla. Dictum feugiat consectetur in mauris, scelerisque mattis netus gravida.</p>
-                        <ul>
-                          <li>Dictum feugiat consectetur in mauris, scelerisque mattis.</li>
-                          <li>Vitae ornare nullam purus, nec. Velit mi pretium lorem.</li>
-                          <li>Amet, purus etiam nulla urna sed. Risus id lectus.</li>
-                        </ul>
+                        <h4 class="tp-references-grd-des-title"><?php the_title(); ?></h4>
+                        <?php 
+                        if( !empty( $overview['homebeschrijving'] ) ) 
+                          echo wpautop($overview['homebeschrijving']);
+                        else
+                          the_excerpt();
+                        ?>
                         <div class="hm-overons-sec-des-btns">
                           <div class="hm-overons-sec-des-btn hm-overons-sec-des-btn-1">
-                            <a href="#">Lees meer</a>
+                            <a href="<?php the_permalink(); ?>"><?php _e('Lees meer', THEME_NAME); ?></a>
                           </div>
                           <div class="hm-overons-sec-des-btn hm-overons-sec-des-btn-2">
-                            <a href="#">Contacteer ons</a>
+                            <a href="<?php echo esc_url( home_url('contact') );?>"><?php _e('Contacteer ons', THEME_NAME); ?></a>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="hmReferencesSlideItem">
-                  <div class="tp-references-grd-row clearfix">
-                    <div class="tp-references-grd-lft-col">
-                      <div class="tp-references-grd-lft-fea-img inline-bg" style="background: url(assets/images/references-item-fea-img-01.png);">
-                        
-                      </div>
-                    </div>
-                    <div class="tp-references-grd-rgt-col">
-                      <div class="tp-references-grd-rgt-col-inr">
-                        <h4 class="tp-references-grd-des-title">Project titel</h4>
-                        <p>Vitae ridiculus dapibus morbi non, at orci leo volutpat integer. Aliquam ipsum sit magna est nulla nulla. Dictum feugiat consectetur in mauris, scelerisque mattis netus gravida.</p>
-                        <ul>
-                          <li>Dictum feugiat consectetur in mauris, scelerisque mattis.</li>
-                          <li>Vitae ornare nullam purus, nec. Velit mi pretium lorem.</li>
-                          <li>Amet, purus etiam nulla urna sed. Risus id lectus.</li>
-                        </ul>
-                        <div class="hm-overons-sec-des-btns">
-                          <div class="hm-overons-sec-des-btn hm-overons-sec-des-btn-1">
-                            <a href="#">Lees meer</a>
-                          </div>
-                          <div class="hm-overons-sec-des-btn hm-overons-sec-des-btn-2">
-                            <a href="#">Contacteer ons</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <?php endwhile; ?>
               </div>
+              <?php } wp_reset_postdata(); endif; ?>
             </div>
-            <div class="view-all-references-btn">
-              <a href="#">
-                <span>Bekijk al onze referenties </span>
-                <i>
-                  <svg class="right-arrow-white-svg" width="12" height="10" viewBox="0 0 12 10" fill="#fff">
-                    <use xlink:href="#right-arrow-white-svg"></use>
-                  </svg> 
-                </i>
-              </a>
-            </div>
+            <?php 
+            $hrknop = $hrefer['knop'];
+            if( is_array( $hrknop ) &&  !empty( $hrknop['url'] ) ){
+                printf('<div class="view-all-references-btn"><a href="%s" target="%s"><span>%s</span> <i><svg class="right-arrow-white-svg" width="12" height="10" viewBox="0 0 12 10" fill="#fff"><use xlink:href="#right-arrow-white-svg"></use></svg></i></a></div>', $hrknop['url'], $hrknop['target'], $hrknop['title']); 
+            } 
+            ?>
           </div>
 
         </div>

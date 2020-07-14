@@ -13,7 +13,7 @@
     $logo_tag2 = '';
   }
 
-  $spacialArry = array(".", "/", "+", " ");$replaceArray = '';
+  $spacialArry = array(".", "/", "+", " ", "(", ")");$replaceArray = '';
   $adres = get_field('address', 'options');
   $gmapsurl = get_field('google_maps', 'options');
   $e_mailadres = get_field('emailaddress', 'options');

@@ -47,7 +47,7 @@
                     <?php 
                     $afbeelding_id = get_field('afbeelding', $term, false); 
                     if( !empty($afbeelding_id) ):
-                      $afbeelding_src = cbv_get_image_src( $afbeelding_id );
+                      $afbeelding_src = cbv_get_image_src( $afbeelding_id, 'pcatgrid' );
                     else:
                       $afbeelding_src = THEME_URI.'/assets/images/producten-overview-items-img-0010.jpg';
                     endif; ?>

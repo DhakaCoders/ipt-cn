@@ -22,7 +22,13 @@ if( !function_exists('cbv_theme_setup') ){
 		if(function_exists('add_theme_support')) {
 			add_theme_support('category-thumbnails');
 		}
-        add_image_size( 'bloggrid', 400, 280, true );
+        add_image_size( 'hmbanner', 1920, 832, true );
+        add_image_size( 'productgird', 216, 162, true );
+        add_image_size( 'overgrid', 586, 544, true );
+        add_image_size( 'hrefergrid', 564, 500, true );
+        add_image_size( 'pcatgrid', 330, 292, true );
+        add_image_size( 'galleryfull', 842, 602, true );
+        add_image_size( 'gallerythumb', 292, 282, true );
 
 
 		
@@ -156,27 +162,13 @@ function get_all_referenties_posts( $query ) {
         if( !is_admin() && $query->is_main_query() && is_post_type_archive( 'referentie' ) ) {
             $query->set( 'posts_per_page', '3' );
         }
+        if( !is_admin() && $query->is_main_query() && is_tax( 'referenties_cat' ) ) {
+            $query->set( 'posts_per_page', '3' );
+        }
     }
 add_action( 'pre_get_posts', 'get_all_referenties_posts' );
 
-function wds_cpt_search( $query ) {
- 
-    // If we're on the search page, working with the main query, and someone searched for something...
-    if ( is_search() && $query->is_main_query() && $query->get( 's' ) ) {
- 
-        // Add the CPT's to include in search.    
-        $query->set( 'post_type', array( 
-            'post', 
-            'page', 
-            'project',
-            'teams',
-            'management',
-            'vacancy',
-            'advisor'
-        ) );
-    }
-}
-add_action( 'pre_get_posts', 'wds_cpt_search' );
+
 
 
 /**
@@ -223,10 +215,9 @@ if( !function_exists('cbv_custom_both_breadcrump')){
     }
 }
 
- add_filter('acf/fields/relationship/query', 'relationship_only_own_posts', 10, 3);
+/* add_filter('acf/fields/relationship/query', 'relationship_only_own_posts', 10, 3);
   function relationship_only_own_posts($args, $field, $post_id) {
     // Restrict results to children of the current post only.
-    echo $post_id;
     $args['meta_query'][] = array(
     'key' => 'actievecategorie',
     'value' => $post_id,
@@ -234,6 +225,20 @@ if( !function_exists('cbv_custom_both_breadcrump')){
     );
     return $args;
   }
+*/
+add_filter('acf/fields/relationship/query/name=actievecategorie', 'add_artist_meta_query', 10, 3);
+function add_artist_meta_query($args, $field, $post_id) {
+  if (isset($args['s'])) {
+    $args['meta_query'] = array(
+      array(
+        'key' => 'actievecategorie',
+        'value' => $args['s'],
+        'compare' => '='
+      )
+    );
+  }
+  return $args;
+}
 
 /**
 Debug->>

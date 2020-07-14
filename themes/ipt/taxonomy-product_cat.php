@@ -34,7 +34,7 @@ get_template_part( 'templates/page', 'banner' );
           <?php 
             $afbeelding_id = get_field('afbeelding', $cterm, false); 
             if( !empty($afbeelding_id) ):
-              $afbeelding_src = cbv_get_image_src( $afbeelding_id );
+              $afbeelding_src = cbv_get_image_src( $afbeelding_id, 'overgrid' );
             else:
               $afbeelding_src = THEME_URI.'/assets/images/producten-overview-items-img-0010.jpg';
             endif; 
@@ -45,7 +45,7 @@ get_template_part( 'templates/page', 'banner' );
               <strong class="ipt-pd-wel-des-subtitle">Producten</strong>
               <?php printf('<h2 class="ipt-pd-wel-des-title">%s</h2>', $cterm->name); ?>
               <?php if( !empty($cterm->description) ) echo wpautop($cterm->description); ?>
-              <a href="#">Producten</a>
+              <a href="<?php echo esc_url( get_term_link( $cterm ) ); ?>">Producten</a>
             </div>
           </div>
         </div>
@@ -98,7 +98,7 @@ get_template_part( 'templates/page', 'banner' );
               while($query->have_posts()): $query->the_post(); 
                 $overview = get_field('overview');
                 if( !empty($overview['afbeelding']) )
-                  $pro_tag = cbv_get_image_tag($overview['afbeelding']);
+                  $pro_tag = cbv_get_image_tag($overview['afbeelding'], 'productgird');
                 else
                   $pro_tag = '';
               ?>

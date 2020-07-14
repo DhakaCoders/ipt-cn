@@ -60,7 +60,10 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
     </div>
   </div>
 </section>
-
+<?php 
+$postTitle = get_the_title();
+$permalink = get_the_permalink();
+?>
 <section class="referenties-details-slider-sec">
   <div class="container">
     <div class="row">
@@ -76,8 +79,8 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
               </div>
               <div class="referenties-details-slider-top-socials-icons">
                 <ul class="reset-list">
-                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo $permalink; ?>&title=<?php echo $postTitle; ?>&summary=&source="><i class="fab fa-linkedin-in"></i></a></li>
+                  <li><a href="https://twitter.com/home?status=<?php echo $permalink; ?>"><i class="fab fa-twitter"></i></a></li>
                 </ul>
               </div>
             </div>
@@ -242,7 +245,7 @@ if( empty($standaardbanner) ) $standaardbanner = THEME_URI.'/assets/images/page-
                     <?php 
                     $afbeelding_id = get_field('afbeelding', $term, false); 
                     if( !empty($afbeelding_id) ):
-                      $afbeelding_src = cbv_get_image_src( $afbeelding_id );
+                      $afbeelding_src = cbv_get_image_src( $afbeelding_id, 'pcatgrid' );
                     else:
                       $afbeelding_src = THEME_URI.'/assets/images/producten-overview-items-img-0010.jpg';
                     endif; ?>

@@ -5,7 +5,7 @@
   get_header(); 
 
   $thisID = get_the_ID();
-  $spacialArry = array(".", "/", "+", " ");$replaceArray = '';
+  $spacialArry = array(".", "/", "+", " ", "(", ")");$replaceArray = '';
   $address = get_field('address', 'options');
   $gmapsurl = get_field('google_maps', 'options');
   $emailadres = get_field('emailaddress', 'options');
