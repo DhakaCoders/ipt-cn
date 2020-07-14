@@ -141,6 +141,10 @@
 	.referenties-references-sec{
 		padding-top: 70px;
 	}
+	.tp-referenties-references-grd-row{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 	
 }
 @media(max-width: 991px){
@@ -173,7 +177,13 @@
 		padding-top: 65px;
 	}
 	.referenties-references-sec-hdr{
-		padding-bottom: 0;
+		padding-bottom: 30px;
+	}
+	.hm-our-references-sec.referenties-references-sec .tp-references-grd-rgt-col{
+		padding-top: 0;
+	}
+	.tp-references-grd-rgt-col-title{
+		font-size: 16px;
 	}
 }
 @media(max-width: 639px){

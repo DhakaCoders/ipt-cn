@@ -253,7 +253,7 @@
     line-height: 20px;
     color: #FF0000;
     position: absolute;
-    right: 0px;
+    right: 12px;
     top: 0px;
     text-align: right;
     width: auto;
@@ -430,7 +430,7 @@
 		padding-top: 20px;
 	}
 	.page-banner-des {
-	    padding-top: 90px;
+	    padding-top: 95px;
 	}
 	.page-banner-title {
 	    font-size: 45px;
@@ -496,6 +496,10 @@
 	.ipt-cnt-entry-title {
 	    font-size: 22px!important;
 	}
+	.pd-contact{
+		margin-left: -20px;
+		margin-right: -20px;
+	}
 }
 
 @media(max-width: 479px){
@@ -512,11 +516,18 @@
 }
 
 @media(max-width: 359px){
-	.ipt-contact-form-sec .wpforms-form 
-	.wpforms-field-container .wpforms-has-error label.wpforms-error {
-	    font-size: 10px;
+	.ipt-contact-form-sec .wpforms-form .wpforms-field-container .wpforms-has-error label.wpforms-error {
+	    font-size: 9px;
 	}
 	.page-banner-title {
 	    font-size: 32px;
+	}
+	.ipt-contact-form-sec .wpforms-form .wpforms-field-container .wpforms-field label{
+		font-size: 13px;
+	}
+	.ipt-contact-form-sec .wpforms-form .wpforms-field-container .wpforms-field input{
+		height: 55px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 }

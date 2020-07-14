@@ -232,9 +232,6 @@
 }
 /* responsive */
 @media(max-width: 991px){
-	.referenties-details-slider-sec-innr{
-		padding-bottom: 50px;
-	}
 	.referenties-details-slider-title{
 		font-size: 34px;
 	}
@@ -417,6 +414,9 @@
 	}
 	.referenties-details-slider-sec-innr {
 	    padding-bottom: 30px;
+	}
+	.referenties-details-items-sec-hedding {
+	    padding-bottom: 20px;
 	}
 }
 @media(max-width: 459px){

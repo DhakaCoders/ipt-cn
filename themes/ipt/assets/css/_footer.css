@@ -90,7 +90,7 @@
 	margin: 0 0 15px 0;
 	font-weight: 700;
 	font-size: 40px;
-	line-height: 1;
+	line-height: 1.2;
 }
 
 .ftr-top-inr p{
@@ -199,19 +199,12 @@
 	.loc-address a br{
 		display: none;
 	}
-	.home .footer-wrp {
-	    padding-left: 15px;
-	    padding-bottom: 20px;
-	}
 	.ftr-top-sec-btn a{
 		max-width: 410px;
 	}
 }
 
 @media(max-width: 991px){
-	.ftr-btm {
-	    padding: 45px 0 110px;
-	}
 	.ftr-col.ftr-col-1{
 		width: 100%;
 		text-align: center;
@@ -324,6 +317,9 @@
 	.ftshdr-title {
 	    font-size: 32px;
 	}
+	.ftr-btm{
+		padding-bottom: 100px;
+	}
 }
 
 @media(max-width: 575px){
@@ -359,8 +355,13 @@
 	}
 	.ftr-top-sec-btn a{
 		max-width: 280px;
+		margin-left: auto;
+		margin-right: auto;
 		font-size: 19px;
 		height: 70px;
+	}
+	.ftr-top-sec-btn-3 a{
+		max-width: 280px;
 	}
 	.ftr-top-sec-btn{
 		padding-left: 0;
@@ -370,6 +371,8 @@
 }
 
 @media(max-width: 359px){
-
+	.ftshdr-title {
+	    font-size: 27px;
+	}
 }
 

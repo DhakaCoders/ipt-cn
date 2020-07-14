@@ -89,7 +89,7 @@ $permalink = get_the_permalink();
             $galerij = get_field('galerij', $thisID);
             if( $galerij ): 
           ?>
-          <div class="referenties-details-sliders-cntlr">
+          <div class="referenties-details-sliders-cntlr hide-xs-slider">
             <div class="referenties-details-left-slider">
               <div class="rdls-arrows">
                 <span class="rdls-lft-arrow">
@@ -150,6 +150,37 @@ $permalink = get_the_permalink();
                     <div class="rdt-slider-items inline-bg" style="background: url('<?php echo $gthum; ?>');">
                     </div>
                   </div>
+                </div>
+                <?php endforeach; ?>
+              </div>
+            </div>
+          </div>
+
+          <div class="xs-referenties-details-sliders">
+            <div class="xs-referenties-details-big-slider xsReferentiesDetailsBigSlider">
+              <?php 
+                $gful = '';
+                foreach( $galerij as $galeri ): 
+                  if( !empty($galeri['id']) ){
+                    $gful = cbv_get_image_src($galeri['id'], 'galleryfull');
+                  }
+                ?>
+                <div class="xs-referenties-details-big-slideItem">
+                  <div class="inline-bg" style="background: url('<?php echo $gful; ?>');"></div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+            <div class="xs-referenties-details-thumb-slider-cnltr">
+              <div class="xs-referenties-details-thumb-slider xsReferentiesDetailsThumbSlider">
+                <?php 
+                $gthum = '';
+                foreach( $galerij as $galeri ): 
+                  if( !empty($galeri['id']) ){
+                    $gthum = cbv_get_image_src($galeri['id'], 'gallerythumb');
+                  }
+                ?>
+                <div class="xs-referenties-details-thumb-slideItem">
+                  <div class="inline-bg" style="background: url('<?php echo $gthum; ?>');"></div>
                 </div>
                 <?php endforeach; ?>
               </div>

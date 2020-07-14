@@ -13,9 +13,9 @@ function cbv_get_image_tag( $id, $size = 'full', $title = false ){
 		$image_src = wp_get_attachment_image_src( $id, $size, false );
 
 		if( $title ){
-			$output = '<img src="'.$image_src[0].'" alt="'.$image_alt.'" title="'.$image_title.'">';
+			$output = '<img class="style-svg" src="'.$image_src[0].'" alt="'.$image_alt.'" title="'.$image_title.'">';
 		}else{
-			$output = '<img src="'.$image_src[0].'" alt="'.$image_alt.'">';
+			$output = '<img class="style-svg" src="'.$image_src[0].'" alt="'.$image_alt.'">';
 		}
 
 		return $output;

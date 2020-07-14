@@ -253,13 +253,16 @@ endif;
                 ?>
                 <li>
                   <a href="<?php echo get_term_link( $sCat ); ?>" class="tab-link tab-btn<?php echo ($activeCat == $sCat->term_id)? ' current': ''; ?>">
-                    <?php 
-                    $afbeelding_id = get_field('icon', $sCat, false); 
-                    if( !empty($afbeelding_id) ):
-                      echo cbv_get_image_tag( $afbeelding_id );
-                    endif;
-                    ?>
+                    <i>
+                      <?php 
+                      $afbeelding_id = get_field('icon', $sCat, false); 
+                      if( !empty($afbeelding_id) ):
+                        echo cbv_get_image_tag( $afbeelding_id );
+                      endif;
+                      ?>
+                    </i>
                     <span><?php echo $sCat->name; ?></span>
+
                   </a> 
                 </li>
                 <?php endforeach; ?>

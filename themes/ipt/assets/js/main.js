@@ -197,12 +197,6 @@ if( $('.iptPdSliders').length ){
 }
 
 
-
-
-/* End of Shoriful*/
-
-
-
 $('.referentiesDetailsSlider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -258,15 +252,6 @@ $('.xsReferentiesDetailsThumbSlider').slick({
         // instead of a settings object
       ]
 });
-
-/* End of Noyon */
-
-
-
-
-
-/*End of Rannojit*/
-
 if( $('.hm-overons-sec-des-logos').length ){
     $('.hm-overons-sec-des-logos').slick({
       dots: false,

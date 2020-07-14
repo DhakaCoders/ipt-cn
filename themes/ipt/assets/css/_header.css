@@ -606,11 +606,12 @@ nav.main-nav ul.sub-menu li:hover:after {
 		height: 80px;
 		display: flex;
 		align-items: center;
-		/*position: fixed;
+		position: fixed;
 		left: 0;
 		right: 0;
-		bottom: 10px;*/
+		bottom: 0;
 	}
+
 	.xs-nav-menu-innr{
 		height: 100%;
 		width: 100%;
@@ -845,6 +846,7 @@ nav.main-nav ul.sub-menu li:hover:after {
 	.header{
 		min-height: 88px;
 	}
+	
 }
 
 @media(max-width: 575px){
