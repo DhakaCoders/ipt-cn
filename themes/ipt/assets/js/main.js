@@ -412,5 +412,10 @@ $('.tp-tabs-btn').on('click', function(){
   $('.tp-tabs-btn').html(selectText);
 });*/
 
-
+$("#producten").click(function(e) {
+  e.preventDefault();
+    $('html, body').animate({
+        scrollTop: $("#target-producten").offset().top
+    }, 500);
+});
 })(jQuery);

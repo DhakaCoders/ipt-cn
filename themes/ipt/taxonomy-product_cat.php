@@ -45,7 +45,7 @@ get_template_part( 'templates/page', 'banner' );
               <strong class="ipt-pd-wel-des-subtitle">Producten</strong>
               <?php printf('<h2 class="ipt-pd-wel-des-title">%s</h2>', $cterm->name); ?>
               <?php if( !empty($cterm->description) ) echo wpautop($cterm->description); ?>
-              <a href="<?php echo esc_url( get_term_link( $cterm ) ); ?>">Producten</a>
+              <a href="#" id="producten">Producten</a>
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@ get_template_part( 'templates/page', 'banner' );
 </section>
 
 <?php $cintro = get_field('intro', $cterm);?>
-<section class="ipt-pd-slider-sec-wrap">
+<section class="ipt-pd-slider-sec-wrap" id="target-producten">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -100,7 +100,7 @@ get_template_part( 'templates/page', 'banner' );
                 if( !empty($overview['afbeelding']) )
                   $pro_tag = cbv_get_image_tag($overview['afbeelding'], 'productgird');
                 else
-                  $pro_tag = '';
+                  $pro_tag = '<img src="'.THEME_URI.'/assets/images/dft-progrid.jpg" alt="'.get_the_title().'">';
               ?>
               <div class="ipt-pd-slider-item mHc">
                 <div class="ipt-pd-slider-item-ctlr">

@@ -9,7 +9,6 @@
 ?>
 <section class="google-map-sec">
   <div class="google-map" data-homeurl="<?php echo THEME_URI; ?>" data-latitude="<?php echo $gmap['lat']; ?>" data-longitude="<?php echo $gmap['lng']; ?>">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1053132.5390187346!2d3.919207982966997!3d50.8727335933461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c17d64edf39797%3A0x47ebf2b439e60ff2!2sBelgium!5e0!3m2!1sen!2sbd!4v1593595059125!5m2!1sen!2sbd" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
   </div>
   <div class="contact-google-map-des">
     <div class="contact-google-map-des-ctlr">
