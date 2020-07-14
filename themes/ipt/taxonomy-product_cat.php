@@ -54,16 +54,20 @@ get_template_part( 'templates/page', 'banner' );
   </div>
 </section>
 
-
+<?php $cintro = get_field('intro', $cterm);?>
 <section class="ipt-pd-slider-sec-wrap">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="ipt-pd-slider-sec-inr">
+          <?php if( $cintro ): ?>
           <div class="ipt-pd-slider-entry-hdr">
-            <h3 class="ipt-pd-slider-entry-tilte">Neque feugiat vehicula aliquet</h3>
-            <p>Vitae ridiculus dapibus morbi non, at orci leo volutpat integer. Aliquam ipsum sit magna est nulla nulla. <br> Dictum feugiat consectetur in mauris, scelerisque mattis netus gravida.</p>
+            <?php 
+              if( !empty( $cintro['titel'] ) ) printf( '<h3 class="ipt-pd-slider-entry-tilte">%s</h3>', $cintro['titel']); 
+              if( !empty( $cintro['beschrijving'] ) ) echo wpautop($cintro['beschrijving']); 
+            ?>
           </div>
+          <?php endif; ?>
           <?php
           $query = new WP_Query(array( 
             'post_type'=> 'product',
@@ -117,7 +121,13 @@ get_template_part( 'templates/page', 'banner' );
     </div>
   </div>
 </section>
+<?php
+  $showhide_contact = get_field('showhide_contacteerons', 'options');
+  $contons = get_field('contacteerons', 'options');
 
+  if($showhide_contact):
+    if($contons):
+?>
 
 <div class="ipt-pd-ctlr">
   <section class="ipt-contact-form-sec">
@@ -127,11 +137,13 @@ get_template_part( 'templates/page', 'banner' );
           <div class="pd-contact">
             <div class="ipt-contact-form-sec-inr">
               <div class="ipt-contact-entry-hdr">
-                <h2 class="ipt-cnt-entry-title">CONTACTEER ONS VOOR MEER INFORMATIE</h2>
-                <p>Vitae ridiculus dapibus morbi non, at orci leo volutpat integer. Aliquam ipsum sit magna est nulla nulla. <br> Dictum feugiat consectetur in mauris, scelerisque mattis netus gravida.</p>
+                <?php 
+                  if( !empty( $contons['titel'] ) ) printf( '<h2 class="ipt-cnt-entry-title">%s</h2>', $contons['titel']); 
+                  if( !empty( $contons['beschrijving'] ) ) echo wpautop($contons['beschrijving']); 
+                ?>
               </div>
               <div class="wpforms-container">
-                <?php echo do_shortcode('[wpforms id="357"] '); ?>
+                <?php if(!empty($contons['form_shortcode'])) echo do_shortcode( $contons['form_shortcode'] ); ?>
               </div>
             </div>
           </div>
@@ -140,5 +152,7 @@ get_template_part( 'templates/page', 'banner' );
     </div>
   </section>
 </div>
+<?php endif; ?>
+<?php endif; ?>
 <?php get_template_part('templates/promo', 'section'); ?>
 <?php get_footer(); ?>

@@ -155,7 +155,7 @@ if($query->have_posts()):
                       <h3 class="producten-overview-items-title mHc2"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                     </div>
                     
-                    <?php if( !empty( $overview['kortebeschrijving'] ) ) printf('<p class="mHc3">%s</p>', $overview['kortebeschrijving']); ?>
+                    <?php if( !empty( get_the_excerpt() ) ) printf('<p class="mHc3">%s</p>', get_the_excerpt()); ?>
                     <div class="producten-overview-items-btn referenties-overview-items-btn referenties-overview-items-btn">
                       <a href="<?php the_permalink(); ?>"><?php _e('meer info', THEME_NAME); ?></a>
                     </div>

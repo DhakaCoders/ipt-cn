@@ -57,9 +57,15 @@ get_header();
       <div class="row">
         <div class="col-sm-12">
           <div class="hm-fea-boxs-sec-cntlr  hmFeaBoxsSecSlider clearfix">
-            <?php foreach( $htroefs as $htroef ): ?>
+            <?php 
+            $has_knop = '';
+            foreach( $htroefs as $htroef ): 
+              if( !empty( $htroef['knop']) ){
+                $has_knop = ' has-knop';
+              }
+            ?>
             <div class="hm-fea-box-item-col">
-              <div class="hm-fea-box-item mHc">
+              <div class="hm-fea-box-item<?php echo $has_knop; ?> mHc">
                 <?php if( $htroef['knop'] ): ?>
                 <a href="<?php echo $htroef['knop']; ?>" class="overlay-link"></a>
                 <?php endif; ?>
@@ -107,11 +113,7 @@ endif;
     <div class="hmProBxesSlide">
       <div class="hm-pro-bxe-item mHc">
         <div class="hm-pro-bxe-item-icon mHc1">
-          <i>
-            <svg class="hm-pro-bxe-item-icon-01-svg" width="84" height="84" viewBox="0 0 84 84" fill="#000062">
-              <use xlink:href="#hm-pro-bxe-item-icon-01-svg"></use>
-            </svg> 
-          </i>
+           <?php if( !empty($pcat['icon']) ) echo cbv_get_image_tag($pcat['icon']); ?>
         </div>
         <?php  
           if( !empty( $pcat['titel'] ) ) printf( '<h3 class="hm-pro-bxe-item-title mHc2"><a href="%s">%s</a></h3>', $pknop, $pcat['titel']); 
