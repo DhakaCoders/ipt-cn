@@ -75,12 +75,12 @@
 .fl-pagi-ctlr{
 	padding-top: 32px;
 }
-.fl-pagi-ctlr .page-numbers-cntlr{
+.fl-pagi-ctlr .page-numbers{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.page-numbers-cntlr:after{
+.fl-pagi-ctlr .page-numbers:after{
 	position: absolute;
 	content: "";
 	width: 100%;
@@ -91,34 +91,33 @@
 	bottom: 0;
 	z-index: 
 }
-.page-numbers-cntlr >li{
+.fl-pagi-ctlr .page-numbers > li{
 	font-size: 14px;
 	font-weight: 700;
 	line-height: 1;
 	color: #474747;
 	padding: 0 29px;
 	padding-bottom: 30px;
-	/* border-bottom: 3px solid #FF0000; */
 }
-.page-numbers-cntlr >li:last-child{
+.fl-pagi-ctlr .page-numbers > li:last-child{
 	padding-right: 0;
 }
-.page-numbers-cntlr >li:first-child{
+.fl-pagi-ctlr .page-numbers > li:first-child{
 	padding-left: 0;
 }
-.page-numbers-cntlr > li >a{
+.fl-pagi-ctlr .page-numbers > li >a{
 	display: inline-block;
 	color: #474747;
 }
-.page-numbers-cntlr .current,
-.page-numbers-cntlr > li >a:hover{
+.fl-pagi-ctlr .page-numbers .current,
+.fl-pagi-ctlr .page-numbers:hover{
 	border: #FF0000;
 	color: #FF0000;
 }
-.page-numbers-cntlr .current{
+.fl-pagi-ctlr .page-numbers .current{
 	position: relative;
 }
-.page-numbers-cntlr .current:after{
+.fl-pagi-ctlr .page-numbers .current:after{
 	position: absolute;
 	content: "";
 	width: 14px;
@@ -131,7 +130,7 @@
 	z-index: 11;
 
 }
-.page-numbers{
+.fl-pagi-ctlr .page-numbers{
 	cursor: pointer;
 }
 /* responsive */

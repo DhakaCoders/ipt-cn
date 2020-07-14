@@ -170,7 +170,7 @@ img{
 ul.reset-list,
 ol.reset-list,
 ul.sub-menu,
-.fl-pagi-pagi-ctlr ul,
+.fl-pagi-ctlr ul,
 .reset-slect ul{
 	margin: 0;
 	padding: 0;
@@ -178,7 +178,7 @@ ul.sub-menu,
 }
 .reset-list li,
 ul.sub-menu li,
-.fl-pagi-pagi-ctlr ul li,
+.fl-pagi-ctlr ul li,
 .reset-slect ul li{
 	padding: 0;
 	margin: 0;
@@ -187,7 +187,7 @@ ul.sub-menu li,
 }
 .reset-list li:before,
 ul.sub-menu li:before,
-.fl-pagi-pagi-ctlr ul li:before,
+.fl-pagi-ctlr ul li:before,
 .reset-slect ul li:before{
 	content: none!important;
 }
