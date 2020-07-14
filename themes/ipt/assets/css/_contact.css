@@ -48,7 +48,7 @@
 	height: 12px;
 	width: 12px;
 }
-.breadcrumbs ul li.active a:before,
+.breadcrumbs ul li a.fl-home-icon:before,
 .xs-breadcrumbs ul li:first-child a:before{
 	content: "";
 	position: absolute;
@@ -147,11 +147,16 @@
 }
 
 
-
+.ipt-contact-form-sec .wpforms-field-container{
+	margin-left: -12px!important;
+	margin-right: -12px!important;
+}
 .ipt-contact-form-sec .wpforms-form .wpforms-field-container .wpforms-field{
 	float: left;
 	width: 50%;
+	padding: 0 12px;
 	padding-bottom: 20px;
+
 }
 
 .ipt-contact-form-sec .wpforms-form .wpforms-field-container .companyField,
@@ -228,7 +233,7 @@
 	font-size: 14px;
 	line-height: 18px;
 	text-transform: uppercase;
-	color: #fff;
+	color: #fff!important;
 	font-weight: 700;
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
@@ -274,6 +279,9 @@
 }
 
 
+.ipt-contact-form-sec div.wpforms-container-full .wpforms-form .wpforms-field{
+	clear: initial!important;
+}
 
 
 
