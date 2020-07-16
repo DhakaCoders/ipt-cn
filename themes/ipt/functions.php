@@ -215,26 +215,6 @@ if( !function_exists('cbv_custom_both_breadcrump')){
     }
 }
 
-add_filter('acf/fields/relationship/query', 'my_acf_fields_relationship_query', 10, 3);
-function my_acf_fields_relationship_query( $args, $field, $post_id ) {
-    $taxID = get_field('hreferenties_actievecategorie', HOMEID);
-    // Show 40 posts per AJAX call.
-    $args['posts_per_page'] = 40;
-
-    $args['tax_query'] = array(
-      array(
-        'taxonomy' => 'referenties_cat',
-        'field' => 'term_id',
-        'terms' => $taxID
-      )
-    );
-
-    // Restrict results to children of the current post only.
-    //$args['post_parent'] = $post_id;
-
-    return $args;
-}
-
 
 /**
 Debug->>
