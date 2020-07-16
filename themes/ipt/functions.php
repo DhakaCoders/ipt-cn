@@ -215,30 +215,26 @@ if( !function_exists('cbv_custom_both_breadcrump')){
     }
 }
 
-/* add_filter('acf/fields/relationship/query', 'relationship_only_own_posts', 10, 3);
-  function relationship_only_own_posts($args, $field, $post_id) {
-    // Restrict results to children of the current post only.
-    $args['meta_query'][] = array(
-    'key' => 'actievecategorie',
-    'value' => $post_id,
-    'compare' => '='
-    );
-    return $args;
-  }
-*/
-add_filter('acf/fields/relationship/query/name=actievecategorie', 'add_artist_meta_query', 10, 3);
-function add_artist_meta_query($args, $field, $post_id) {
-  if (isset($args['s'])) {
-    $args['meta_query'] = array(
+add_filter('acf/fields/relationship/query', 'my_acf_fields_relationship_query', 10, 3);
+function my_acf_fields_relationship_query( $args, $field, $post_id ) {
+    $taxID = get_field('hreferenties_actievecategorie', HOMEID);
+    // Show 40 posts per AJAX call.
+    $args['posts_per_page'] = 40;
+
+    $args['tax_query'] = array(
       array(
-        'key' => 'actievecategorie',
-        'value' => $args['s'],
-        'compare' => '='
+        'taxonomy' => 'referenties_cat',
+        'field' => 'term_id',
+        'terms' => $taxID
       )
     );
-  }
-  return $args;
+
+    // Restrict results to children of the current post only.
+    //$args['post_parent'] = $post_id;
+
+    return $args;
 }
+
 
 /**
 Debug->>
