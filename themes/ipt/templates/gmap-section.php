@@ -8,7 +8,9 @@
     $ghours = $gmaps['openingstijden'];
 ?>
 <section class="google-map-sec">
-  <div class="google-map" data-homeurl="<?php echo THEME_URI; ?>" data-latitude="<?php echo $gmap['lat']; ?>" data-longitude="<?php echo $gmap['lng']; ?>">
+  <!-- <div class="google-map" data-homeurl="<?php echo THEME_URI; ?>" data-latitude="<?php echo $gmap['lat']; ?>" data-longitude="<?php echo $gmap['lng']; ?>"> -->
+    <div class="google-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.2825394454685!2d3.9622542805056593!3d50.92752074049562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3a2613f5151f1%3A0xeb2404d605529cc7!2zRXZlbmJyb2VrdmVsZCA0NCwgOTQyMCBFcnBlLU1lcmUsIOCmrOCnh-CmsuCmnOCmv-Cmr-CmvOCmvuCmrg!5e0!3m2!1sbn!2sbd!4v1594844827653!5m2!1sbn!2sbd" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
   </div>
   <div class="contact-google-map-des">
     <div class="contact-google-map-des-ctlr">

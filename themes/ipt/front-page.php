@@ -61,11 +61,13 @@ get_header();
             $has_knop = '';
             foreach( $htroefs as $htroef ): 
               if( !empty( $htroef['knop']) ){
-                $has_knop = ' has-knop';
+                $has_knop = 'has-knop';
+              }else{
+                $has_knop = '';
               }
             ?>
             <div class="hm-fea-box-item-col">
-              <div class="hm-fea-box-item<?php echo $has_knop; ?> mHc">
+              <div class="hm-fea-box-item mHc <?php echo $has_knop; ?>">
                 <?php if( $htroef['knop'] ): ?>
                 <a href="<?php echo $htroef['knop']; ?>" class="overlay-link"></a>
                 <?php endif; ?>

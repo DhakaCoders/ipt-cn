@@ -91,8 +91,7 @@
 	padding: 28px 20px 15px 40px;
 	position: relative;
 }
-.hm-fea-box-item:hover,
-.hm-fea-box-item-col.slick-current .hm-fea-box-item{
+.hm-fea-box-item.has-knop:hover{
 	background: linear-gradient(219.08deg, #FF0000 18.2%, #C90707 100%), #C90707;
 }
 .hm-fea-box-item-icon{
@@ -207,6 +206,7 @@
 	text-transform: uppercase;
 	font-weight: 700;
 	margin-bottom: 0;
+	padding-top: 2px;
 }
 
 .hm-overons-section{
