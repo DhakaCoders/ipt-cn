@@ -416,6 +416,7 @@
 .tp-references-grd-lft-col{
 	width: 58%;
 	padding-right: 115px;
+	padding-left: 1px;
 }
 .tp-references-grd-lft-fea-img{
 	height: 500px;
@@ -423,7 +424,7 @@
 }
 .tp-references-grd-rgt-col{
 	width: 42%;
-	padding: 70px 0 70px 0;
+	padding: 70px 15px 70px 0;
 }
 .tp-references-grd-rgt-col ul{
 	padding-left: 15px;

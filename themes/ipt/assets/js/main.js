@@ -53,25 +53,11 @@ $('.fancybox').fancybox({
 
 }
 
-
-/**
-Responsive on 767px
-*/
-
 // if (windowWidth <= 767) {
   $('.toggle-btn').on('click', function(){
     $(this).toggleClass('menu-expend');
     $('.toggle-bar ul').slideToggle(500);
   });
-
-
-// }
-
-
-
-// http://codepen.io/norman_pixelkings/pen/NNbqgG
-// https://stackoverflow.com/questions/38686650/slick-slides-on-pagination-hover
-
 
 /**
 Slick slider
@@ -116,9 +102,6 @@ if( $('.responsive-slider').length ){
     });
 }
 
-
-
-
 if( $('#mapID').length ){
 var latitude = $('#mapID').data('latitude');
 var longitude = $('#mapID').data('longitude');
@@ -162,9 +145,11 @@ if( $('.iptPdSliders').length ){
     $('.iptPdSliders').slick({
       pauseOnHover: false,
       dots: false,
-      infinite: false,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
       arrows: true,
-      speed: 300,
+      speed: 600,
       centerMode: false,
       slidesToShow: 3,
       slidesToScroll: 1,
@@ -211,8 +196,10 @@ $('.referentiesDetailsThumbnailSlider').slick({
   slidesToShow: 2,
   slidesToScroll: 1,
   asNavFor: '.referentiesDetailsSlider',
+  autoplay: true,
+  autoplaySpeed: 4000,
   dots: false,
-  infinite: false,
+  infinite: true,
   focusOnSelect: true,
   arrows: true,
   prevArrow: $('.rdls-thumbnail-arrows .rdls-lft-arrow'),
@@ -275,9 +262,6 @@ if( $('.hm-overons-sec-des-logos').length ){
 }
 
 
-
-
-
 if( $('.hmFeaBoxsSecSlider').length ){
     $('.hmFeaBoxsSecSlider').slick({
       dots: false,
@@ -320,10 +304,10 @@ if( $('.hmFeaBoxsSecSlider').length ){
 if( $('.hmReferencesSlider').length ){
     $('.hmReferencesSlider').slick({
       dots: false,
-      infinite: false,
-      autoplay: false,
-      autoplaySpeed: 2000,
-      speed: 300,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      speed: 700,
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: true,
@@ -338,17 +322,6 @@ if( $('.hmReferencesSlider').length ){
       ]
     });
 }
-
-/*$('.tp-tabs .tab-btn').click(function(){
-  $('.hmReferencesSlider').slick('refresh');
-    var tab_id = $(this).attr('data-tab');
-
-    $('.tp-tabs .tab-btn').removeClass('current');
-    $('.fl-tab-content').removeClass('current');
-
-    $(this).addClass('current');
-    $("#"+tab_id).addClass('current');
-});*/
 
 
 if (windowWidth <= 767) {

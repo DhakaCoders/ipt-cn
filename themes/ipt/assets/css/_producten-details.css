@@ -232,7 +232,9 @@
     padding-bottom: 0px;
 }
 
-
+body.tax-product_cat .iptPdSliders .slick-current .ipt-pd-slider-item-img{
+	border: none;
+}
 @media(max-width: 1599px){
 	.ipt-pd-slider-sec-wrap{
 		padding-left: 60px;

@@ -98,7 +98,7 @@
         <div class="col-sm-12">
           <div class="ftr-btm-inr">
             <?php if( !empty( $copyright_text ) ) printf( '<span>%s</span>', $copyright_text); ?>
-            <a href="#">webdesign by conversal</a>
+            <a target="_blank" href="https://www.conversal.be/">webdesign by conversal</a>
           </div>
         </div>
       </div>

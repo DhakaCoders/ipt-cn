@@ -245,7 +245,9 @@
 	border-radius: 8px;
 }
 
-
+.ipt-contact-form-sec .wpforms-form .wpforms-field-container .wpforms-has-error label{
+	color: #FF0000;
+}
 .ipt-contact-form-sec .wpforms-form .wpforms-field-container .wpforms-has-error label.wpforms-error{
 	font-style: normal;
     font-weight: 500;
@@ -257,6 +259,7 @@
     top: 0px;
     text-align: right;
     width: auto;
+    text-transform: none;
 }
 .ipt-contact-form-sec .wpforms-form .wpforms-field-container .wpforms-has-error input{
 	border: 2px solid #FF0000 !important;

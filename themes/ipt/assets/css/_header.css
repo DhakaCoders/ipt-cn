@@ -96,6 +96,7 @@
 .fl-lang-cntlr{
 	position: relative;
 	min-height: 15px;
+	overflow: hidden;
 	margin-right: -10px;
 	padding-left: 5px;
 	min-width: 140px;
@@ -156,7 +157,7 @@
 	top: -15px;
 }
 .fl-lang-cntlr:hover{
-	
+	overflow: initial;
 }
 .fl-lang-cntlr:hover li.lang-active,
 .fl-lang-cntlr:hover li{
@@ -201,11 +202,10 @@ nav.main-nav > ul > li > a{
 	padding-left: 14px;
 
 }
-nav.main-nav > ul > li.current-menu-item > a:before,
-nav.main-nav > ul > li:hover > a:before{
+nav.main-nav > ul > li > a:before{
 	content: "";
 	position: absolute;
-	left: 0;
+	left: -2px;
 	top: 50%;
 	transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
@@ -216,6 +216,13 @@ nav.main-nav > ul > li:hover > a:before{
 	background: #C90808;
 	line-height: 0;
 	margin-top: -2px;
+	opacity: 0;
+	transition: all 0.3s;
+}
+nav.main-nav > ul > li:hover > a:before,
+nav.main-nav > ul > li.current-menu-item > a:before{
+	left: 0;
+	opacity: 1;
 }
 
 nav.main-nav > ul > li.current-menu-item > a{
