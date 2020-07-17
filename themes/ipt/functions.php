@@ -215,30 +215,6 @@ if( !function_exists('cbv_custom_both_breadcrump')){
     }
 }
 
-/* add_filter('acf/fields/relationship/query', 'relationship_only_own_posts', 10, 3);
-  function relationship_only_own_posts($args, $field, $post_id) {
-    // Restrict results to children of the current post only.
-    $args['meta_query'][] = array(
-    'key' => 'actievecategorie',
-    'value' => $post_id,
-    'compare' => '='
-    );
-    return $args;
-  }
-*/
-add_filter('acf/fields/relationship/query/name=actievecategorie', 'add_artist_meta_query', 10, 3);
-function add_artist_meta_query($args, $field, $post_id) {
-  if (isset($args['s'])) {
-    $args['meta_query'] = array(
-      array(
-        'key' => 'actievecategorie',
-        'value' => $args['s'],
-        'compare' => '='
-      )
-    );
-  }
-  return $args;
-}
 
 /**
 Debug->>
