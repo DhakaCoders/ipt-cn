@@ -334,18 +334,21 @@ form .dropdown-menu li a{
 .hm-overons-sec-des-logos .hm-overons-des-logo,
 .hmReferencesSlider .hmReferencesSlideItem,
 .hmFeaBoxsSecSlider .hm-fea-box-item-col,
-.referentiesDetailsSlider .referenties-details-slider-items{
+.referentiesDetailsSlider .referenties-details-slider-items,
+.dftNewsOverviewSlider .dftNewsOverviewSlideItem{
 	display: none;
 }
 .hm-overons-sec-des-logos .hm-overons-des-logo:first-child,
 .hmReferencesSlider .hmReferencesSlideItem:first-child,
 .hmFeaBoxsSecSlider .hm-fea-box-item-col:first-child,
-.referentiesDetailsSlider .referenties-details-slider-items:first-child{
+.referentiesDetailsSlider .referenties-details-slider-items:first-child,
+.dftNewsOverviewSlider .dftNewsOverviewSlideItem:first-child{
 	display: block;
 }
 .hm-overons-sec-des-logos.slick-initialized .hm-overons-des-logo,
 .hmReferencesSlider.slick-initialized .hmReferencesSlideItem,
 .hmFeaBoxsSecSlider.slick-initialized .hm-fea-box-item-col,
-.referentiesDetailsSlider.slick-initialized .referenties-details-slider-items{
+.referentiesDetailsSlider.slick-initialized .referenties-details-slider-items,
+.dftNewsOverviewSlider.slick-initialized .dftNewsOverviewSlideItem{
 	display: block;
 }
